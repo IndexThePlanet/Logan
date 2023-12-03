@@ -1,3 +1,3 @@
 # Logan
 
-See Unitigs and Contigs pages.
+See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
