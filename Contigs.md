@@ -21,3 +21,7 @@ To download one accession, using the [AWS CLI](https://aws.amazon.com/cli/), typ
 To decompress a single unitigs file, type:
 
     zstd -d [accession].contigs.fa.zstd
+
+## Theoretical guarantees
+
+Contigs do not enjoy the same theoretical guarantees as the (unitigs)[Unitigs.md]. Except that, any 31-mer present in the contigs is guaranteed to also appear in the reads. Abundances are reported in the same way as in unitigs.
