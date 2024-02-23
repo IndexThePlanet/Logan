@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a short tutorial to explain how to download several accessions. This is valid for both contigs or unitigs. In this example, we will download contigs.
+This is a short tutorial to explain how to download several accessions. This is valid for both contigs or unitigs. In this example, we will download unitigs.
 
 ## Setup
 
