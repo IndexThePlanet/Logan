@@ -8,19 +8,19 @@ Contigs for all SRA accessions (as of December 2023) were constructed from the [
 
 Contigs are stored at the following location:
 
-    s3://[bucket-name]/c/[accession].contigs.fa.zstd
+    s3://[bucket-name]/c/[accession].contigs.fa.zst
 
 ## Downloading 
 
 To download one accession, using the [AWS CLI](https://aws.amazon.com/cli/), type:
     
-    aws s3 cp s3://[bucket-name]/c/[accession].contigs.fa.zstd . --no-sign-request
+    aws s3 cp s3://[bucket-name]/c/[accession].contigs.fa.zst . --no-sign-request
 
 ## Decompression
 
 To decompress a single unitigs file, type:
 
-    zstd -d [accession].contigs.fa.zstd
+    zstd -d [accession].contigs.fa.zst
 
 ## Theoretical guarantees
 
