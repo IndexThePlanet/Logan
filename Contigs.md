@@ -22,6 +22,10 @@ To decompress a single unitigs file, type:
 
     zstd -d [accession].contigs.fa.zst
 
+## Size
+
+Careful, this S3 bucket is huge. The total size of all unitigs is [xxx] petabytes. It contains [xxx] files. Just listing the folder will take dozens of minutes.
+
 ## Theoretical guarantees
 
 Contigs do not enjoy the same theoretical guarantees as the [unitigs](https://github.com/IndexThePlanet/Logan/blob/main/Unitigs.md#theoretical-guarantees). Except that, any 31-mer present in the contigs is guaranteed to also appear in the reads. Abundances are reported in the same way as in unitigs.
