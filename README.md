@@ -7,3 +7,7 @@ Logan is a dataset of DNA and RNA sequences. It has been constructed by assembli
 ## Data access
 
 See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
+
+## Tutorials
+
+[Download, mapping contigs to a gene of interest](Chickens.md)
