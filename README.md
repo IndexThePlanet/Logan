@@ -10,4 +10,4 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 ## Tutorials
 
-[Download, mapping contigs to a gene of interest](Chickens.md)
+[Downloading, mapping contigs to a gene of interest](Chickens.md)
