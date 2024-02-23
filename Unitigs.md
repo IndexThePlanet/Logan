@@ -32,15 +32,16 @@ On S3, all unitigs are stored at the following locations:
 
     s3://[bucket-name]/u/[accession].unitigs.fa.zst
 
+## Size
+
+Careful, this S3 bucket is huge. The total size of all unitigs is [xxx] petabytes. It contains [xxx] files. Just listing the folder will take dozens of minutes.
+
+
 ## Decompression
 
 To decompress a single unitigs file, type:
 
     zstd -d [accession].unitigs.fa.zst
-
-## Size
-
-Careful, this S3 bucket is huge. The total size of all unitigs is [xxx] petabytes. It contains [xxx] files. Just listing the folder will take dozens of minutes.
 
 ## Theoretical guarantees
 
