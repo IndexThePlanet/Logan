@@ -16,7 +16,7 @@ Where `accession` is the accession name (e.g. SRR14407446), `counter` is a 0-bas
 
 ## Data access
 
-Unitigs are available via AWS S3 at the s3://[bucket-name] bucket.
+Unitigs are available via AWS S3 at the `s3://[bucket-name]` bucket in folder `/u/`.
 
 To download unitigs for one accession, using the [AWS CLI](https://aws.amazon.com/cli/), type:
     
