@@ -14,4 +14,4 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 [Search for a k-mer of interest inside an unitigs accession](Kmer_search.md)
 
-[Downloading, mapping contigs to a gene of interest](Chickens.md)
+[Downloading, mapping many contigs to a gene of interest](Chickens.md)
