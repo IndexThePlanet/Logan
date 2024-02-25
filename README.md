@@ -26,4 +26,4 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 ## Funding
 
-ERC Consolidator (IndexThePlanet) and Amazon Web Service.
+ERC Consolidator (IndexThePlanet), Amazon Web Service, Amazon Open Data
