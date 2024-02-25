@@ -26,4 +26,4 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 ## Funding
 
-This was made possible by a ERC Consolidator grant (IndexThePlanet) and significant support from Amazon Web Service.
+ERC Consolidator (IndexThePlanet) and Amazon Web Service.
