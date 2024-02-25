@@ -10,6 +10,7 @@ In December 2023, the public access part of SRA is about 60 petabases, in 23 mil
 
 ![image](https://github.com/IndexThePlanet/Logan/assets/1218301/3b76ced7-ed01-4842-83f0-d897c0cf7d55)
 
+We have performed assembly on all this data and made the resulting unitigs and contigs available.
 
 ## Data access
 
