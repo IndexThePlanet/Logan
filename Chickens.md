@@ -31,9 +31,11 @@ Let us assume for the rest of the document that the gene sequence is given in th
 Now, if you were to download reads from the SRA and map them to this gene of interest, you could do something like:
 
 ```
-aws s3 cp s3://sra-pub-run-odp/sra/$accession/$accession \ 
-		 $accession.sra --no-sign-request
-minimap2 -t20 -x sr mc1r.fa <(fasterq-dump --fasta-unsorted $accession.sra) \
+aws s3 cp s3://sra-pub-run-odp/sra/$accession/$accession \
+	  $accession.sra \
+          --no-sign-request
+minimap2 -t20 -x sr mc1r.fa \
+         <(fasterq-dump --fasta-unsorted $accession.sra) \
          -o mapping/$accession.minimap2_output
 ```
 
@@ -45,10 +47,9 @@ Despite the usage of Linux pipes, this is a time-consuming step due to the size 
 Instead, consider using Logan to directly map contigs to the gene of interest:
 
 ```
-minimap2 -t 8 -a mc1r.fa  \
-		  <(aws s3 cp s3://logan/c/$accession.contigs.fa.zst -
-		    | zstdcat)     \
-    | samtools view -hF4 -    \
+minimap2 -t 8 -a mc1r.fa \
+          <(aws s3 cp s3://logan/c/$accession.contigs.fa.zst - | zstdcat) \
+    | samtools view -hF4 - \
     > mapping-logan/$accession.minimap2_output
 ```
 
