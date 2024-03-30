@@ -1,3 +1,9 @@
+Who prevenir before release:
+
+- [ ] pasteur comm
+- [ ] canada
+- [ ] open data
+
 # Logan
 
 ## Summary
