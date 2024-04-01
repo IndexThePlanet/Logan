@@ -33,4 +33,4 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 ## Funding
 
-ERC Consolidator (IndexThePlanet), Amazon Web Service, Amazon Open Data
+ERC Consolidator (IndexThePlanet), Amazon Web Service, Registry of Open Data on AWS
