@@ -8,7 +8,7 @@ Contigs for all SRA accessions (as of December 2023) were constructed from the [
 
 Contigs are stored at the following location:
 
-    s3://logan-pub/c/[accession].contigs.fa.zst
+    s3://logan-pub/c/[accession]/[accession].contigs.fa.zst
 
 ## Size
 
@@ -18,7 +18,7 @@ Careful, this S3 bucket is huge. The total size of all unitigs is [xxx] petabyte
 
 To download one accession, using the [AWS CLI](https://aws.amazon.com/cli/), type:
     
-    aws s3 cp s3://logan-pub/c/[accession].contigs.fa.zst . --no-sign-request
+    aws s3 cp s3://logan-pub/c/[accession]/[accession].contigs.fa.zst . --no-sign-request
 
 ## Decompression
 
