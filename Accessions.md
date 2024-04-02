@@ -22,5 +22,5 @@ DRR000339
 To download the unitigs for all these accessions, a simple Bash command will do:
 
 ```
-cat accessions.txt | xargs -I{} aws s3 cp s3://logan-staging/u/{}.unitigs.fa.zst .
+cat accessions.txt | xargs -I{} aws s3 cp s3://logan-pub/u/{}/{}.unitigs.fa.zst .
 ```
