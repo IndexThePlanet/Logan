@@ -12,7 +12,7 @@ Unitigs are stored in FASTA format. The FASTA header is as follows:
 
     >[accession]_[counter] ka:i:[abundance]
 
-Where `accession` is the accession name (e.g. SRR14407446), `counter` is a 0-based integer counter, `abundance` is the mean approximate k-mer abundance over the unitig.
+Where `accession` is the accession name (e.g. SRR11905265), `counter` is a 0-based integer counter, `abundance` is the mean approximate k-mer abundance over the unitig.
 
 ## Data access
 
@@ -22,9 +22,9 @@ To download unitigs for one accession, using the [AWS CLI](https://aws.amazon.co
     
     aws s3 cp s3://logan-pub/u/[accession]/[accession].unitigs.fa.zst . --no-sign-request
 
-e.g. for accession [SRR14407446](https://www.ncbi.nlm.nih.gov/sra/?term=SRR14407446), type:
+e.g. for accession [SRR11905265](https://www.ncbi.nlm.nih.gov/sra/?term=SRR11905265), type:
 
-    aws s3 cp s3://logan-pub/u/SRR14407446/SRR14407446.unitigs.fa.zst . --no-sign-request
+    aws s3 cp s3://logan-pub/u/SRR11905265/SRR11905265.unitigs.fa.zst . --no-sign-request
 
 ## Directory structure
 
