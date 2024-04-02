@@ -34,8 +34,7 @@ On S3, all unitigs are stored at the following locations:
 
 ## Size
 
-Careful, this S3 bucket is huge. The total size of all unitigs is [xxx] petabytes. It contains [xxx] files. Just listing the folder will take dozens of minutes.
-
+Careful, this S3 bucket is huge. The total size of all unitigs is 2.46 petabytes. It contains 27.3 million files. Just listing the folder will take half an hour using `s5cmd ls`.
 
 ## Decompression
 
