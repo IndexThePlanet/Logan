@@ -20,17 +20,17 @@ Unitigs are available via AWS S3 at the `s3://logan-pub` bucket in folder `/u/`.
 
 To download unitigs for one accession, using the [AWS CLI](https://aws.amazon.com/cli/), type:
     
-    aws s3 cp s3://logan-pub/u/[accession].unitigs.fa.zst . --no-sign-request
+    aws s3 cp s3://logan-pub/u/[accession]/[accession].unitigs.fa.zst . --no-sign-request
 
 e.g. for accession [SRR14407446](https://www.ncbi.nlm.nih.gov/sra/?term=SRR14407446), type:
 
-    aws s3 cp s3://logan-pub/u/SRR14407446.unitigs.fa.zst . --no-sign-request
+    aws s3 cp s3://logan-pub/u/SRR14407446/SRR14407446.unitigs.fa.zst . --no-sign-request
 
 ## Directory structure
 
 On S3, all unitigs are stored at the following locations:
 
-    s3://logan-pub/u/[accession].unitigs.fa.zst
+    s3://logan-pub/u/[accession]/[accession].unitigs.fa.zst
 
 ## Size
 
