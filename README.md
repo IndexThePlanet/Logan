@@ -9,7 +9,7 @@ Who prevenir before release:
 
 ## Summary
 
-Logan is a dataset of DNA and RNA sequences. It has been constructed by performing genome assembly over a December 2023 freeze of the entire NCBI Sequence Read Archive. Two related sets of sequences are released: unitigs and contigs. Unitigs preserve nearly all the information present in the original sample, whereas contigs get rid of variation to increase sequence lengths. Both are hosted on a public S3 bucket provided by AWS Open Data, in compressed form. By downloading either unitigs or contigs, users can access the wealth of information contained in the SRA 20x (respectively 80x for contigs) more efficiently in time and disk space compared to raw reads, with minor loss of sensitivity and higher contiguity.
+Logan is a dataset of DNA and RNA sequences. It has been constructed by performing genome assembly over a December 2023 freeze of the entire NCBI Sequence Read Archive. Two related sets of sequences are released: unitigs and contigs. Unitigs preserve nearly all the information present in the original sample, whereas contigs get rid of variation to increase sequence lengths. Both are hosted on a public S3 bucket provided by AWS Open Data, in compressed form. By downloading either unitigs or contigs, users can access the wealth of information contained in the SRA 10x (respectively 40x for contigs) more efficiently in time and disk space compared to raw reads, with minor loss of sensitivity and higher contiguity.
 
 ## SRA size
 
