@@ -13,7 +13,7 @@ Logan is a dataset of DNA and RNA sequences. It has been constructed by performi
 
 ## SRA size
 
-In December 2023, the public access part of SRA consisted of 60 petabases across 23 million accessions. As you can see below, the majority of accessions and bases are DNA, followed by Covid samples and RNA-seq, then metagenomes and single-cell data.
+In December 2023, the public access part of SRA consisted of 50 petabases across 27 million accessions. As you can see below, the majority of accessions and bases are DNA, followed by Covid samples and RNA-seq, then metagenomes and single-cell data.
 
 ![image](https://github.com/IndexThePlanet/Logan/assets/1218301/3b76ced7-ed01-4842-83f0-d897c0cf7d55)
 
