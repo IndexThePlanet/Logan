@@ -31,7 +31,7 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 [Downloading, mapping many contigs to a gene of interest](Chickens.md)
 
-## Contributors
+## Team
 
 - Lead: Rayan Chikhi
 - Artem Babaian
@@ -42,8 +42,8 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
   - Greg Autric
   - Maxime Hugues
 - AWS management:
--  Dorian Schaal
--  Adrien Lainé
+  -  Dorian Schaal
+  -  Adrien Lainé
 - Institut Pasteur IT:
   - Thomas Menard
   - Stéphane Fournier
