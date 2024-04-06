@@ -2,7 +2,7 @@
 
 ## Dataset
 
-Contigs for all SRA accessions were constructed directly from the [Logan Unitigs](Unitigs.md). Unitigs were given to [Minia3](https://github.com/GATB/minia), which performed de Bruijn graph simplifications inspired by [SPAdes](https://github.com/ablab/spades). In total 26.7 million accessions were processed. 
+Contigs for all SRA accessions were constructed directly from the [Logan Unitigs](Unitigs.md). Unitigs were given to [Minia3](https://github.com/GATB/minia), which performed de Bruijn graph simplifications inspired by [SPAdes](https://github.com/ablab/spades) with just k=31. In total 26.7 million accessions were processed. 
 
 ## Directory structure
 
