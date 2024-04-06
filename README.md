@@ -31,8 +31,6 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 [Downloading, mapping many contigs to a gene of interest](Chickens.md)
 
-## Contact
-
 ## Contributors
 
 - Lead: Rayan Chikhi
@@ -40,9 +38,15 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 - Anton Korobeynikov
 - Brice Raffestin
 - Matthieu Falce
-- AWS engineering: Greg Autric, Maxime Hugues
-- AWS management: Dorian Schaal, Adrien Lainé
-- Institut Pasteur DSI: Thomas Menard, Stéphane Fournier
+- AWS engineering:
+  - Greg Autric
+  - Maxime Hugues
+- AWS management:
+-  Dorian Schaal
+-  Adrien Lainé
+- Institut Pasteur IT:
+  - Thomas Menard
+  - Stéphane Fournier
 
 ## Funding
 
