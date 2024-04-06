@@ -10,7 +10,7 @@ In December 2023, the public part of SRA consisted of 50 petabases across 27 mil
 
 ![image](https://github.com/IndexThePlanet/Logan/assets/1218301/3b76ced7-ed01-4842-83f0-d897c0cf7d55)
 
-Note, the y-axis of this chart is in megabases, as this is the preferred unit for SRA accession sizes. 20 G megabases is 20 petabases.
+Note, the y-axis of the second panel is in megabases, as this is the preferred unit for SRA accession sizes. 20 G megabases is 20 petabases.
 
 ## v1 release
 
