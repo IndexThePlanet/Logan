@@ -19,7 +19,7 @@ In December 2023, the public part of SRA consisted of 50 petabases across 27 mil
 
 ## v1 release
 
-The genomes, metagenomes and transcriptomes present in a December 2023 freeze of the SRA have been reconstructed and made available as unitigs and contigs as a v1 release of Logan. See the [Stats v1](Stats-v1.md) page for more details on this data.
+All sequencing experiments from a December 2023 freeze of the SRA have been reconstructed and made available as unitigs and contigs as a v1 release of Logan. See the [Stats v1](Stats-v1.md) page for more details on this data.
 
 ## Data access
 
