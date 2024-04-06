@@ -39,8 +39,10 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 - Artem Babaian
 - Anton Korobeynikov
 - Brice Raffestin
+- Matthieu Falce
 - AWS engineering: Greg Autric, Maxime Hugues
 - AWS management: Dorian Schaal, Adrien Lainé
+- Institut Pasteur DSI: Thomas Menard, Stéphane Fournier
 
 ## Funding
 
