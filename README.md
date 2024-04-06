@@ -31,6 +31,17 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 [Downloading, mapping many contigs to a gene of interest](Chickens.md)
 
+## Contact
+
+## Contributors
+
+- Lead: Rayan Chikhi
+- Artem Babaian
+- Anton Korobeynikov
+- Brice Raffestin
+- AWS engineering: Greg Autric, Maxime Hugues
+- AWS management: Dorian Schaal, Adrien Lainé
+
 ## Funding
 
 ERC Consolidator grant number 101088572 (IndexThePlanet), Amazon Web Service, Registry of Open Data on AWS
