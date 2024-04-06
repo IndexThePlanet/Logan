@@ -2,7 +2,7 @@
 
 ## Dataset
 
-Unitigs for all SRA accessions (as of December 2023). 
+Unitigs for all SRA accessions. 
 
 [Unitigs](https://github.com/GATB/bcalm/blob/master/bidirected-graphs-in-bcalm2/bidirected-graphs-in-bcalm2.md#unitigs-and-compaction) (non-branching paths of the de Bruijn graph, here k=31) are provided in FASTA format, with BCALM2-style links allowing for quick conversion to GFA. Unitigs were constructed using a modified version of [Cuttlefish2](https://github.com/rchikhi/cuttlefish/) which records approximate mean k-mer abundance per unitig. In total 27.3 million accessions were processed.
 
