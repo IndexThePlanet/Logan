@@ -35,7 +35,7 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 - Lead: Rayan Chikhi
 - Artem Babaian
-- Robert Edgar
+- Robert C. Edgar
 - Anton Korobeynikov
 - Brice Raffestin
 - Matthieu Falce
