@@ -3,7 +3,6 @@ Who prevenir before release:
 - [ ] pasteur comm
 - [ ] canada
 - [ ] open data
-- [ ] future proof the dataset version
       
 # Logan
 
