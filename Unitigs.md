@@ -42,6 +42,8 @@ To decompress a single unitigs file, type:
 
     zstd -d [accession].unitigs.fa.zst
 
+Note: unitigs (and contigs) were compressed using [f2sz](https://github.com/asl/f2sz), which is a FASTA-aware block compressed zstd format. In principle one can decompress in parallel.
+
 ## Theoretical guarantees
 
 Any 31-mer that occurs more than twice in the original SRA reads of an accession will appear in the unitigs. Conversely, any 31-mer in the unitigs is also present somewhere in the SRA reads of the accession. 
