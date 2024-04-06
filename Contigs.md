@@ -2,7 +2,7 @@
 
 ## Dataset
 
-Contigs for all SRA accessions (as of December 2023) were constructed from the [Logan Unitigs](Unitigs.md). Unitigs were given to [Minia3](https://github.com/GATB/minia), which performed de Bruijn graph simplifications inspired by [SPAdes](https://github.com/ablab/spades). In total 26.7 million accessions were processed. 
+Contigs for all SRA accessions were constructed directly from the [Logan Unitigs](Unitigs.md). Unitigs were given to [Minia3](https://github.com/GATB/minia), which performed de Bruijn graph simplifications inspired by [SPAdes](https://github.com/ablab/spades). In total 26.7 million accessions were processed. 
 
 ## Directory structure
 
@@ -12,7 +12,7 @@ Contigs are stored at the following location:
 
 ## Size
 
-Careful, this S3 bucket is huge. The total size of all unitigs is 424 terabytes compressed. It contains 26.7M files. Just listing the folder will take half an hour.
+Careful, this S3 bucket is huge. The total size of all unitigs is 385 terabytes compressed. It contains 26.7M files. Just listing the folder will take half an hour.
 
 ## Downloading 
 
