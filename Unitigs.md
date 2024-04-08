@@ -14,7 +14,7 @@ Unitigs are stored in FASTA format. The FASTA header is as follows:
 
 Where `accession` is the accession name (e.g. SRR11905265), `counter` is a 0-based integer counter, `abundance` is the mean approximate k-mer abundance over the unitig.
 
-Additional FASTA header in the form ̀L:i:x` are BCALM2-style links allowing for quick conversion to GFA. Note: in some large accessions, the `ka:i:[xx]` field is replaced by `km:i:[xx]`, this is a bug, consider that they are the same information.
+Additional FASTA header in the form `L:i:x` are BCALM2-style links allowing for quick conversion to GFA. Note: in some large accessions, the `ka:i:[xx]` field is replaced by `km:i:[xx]`, this is a bug, consider that they are the same information.
 
 ## Data access
 
