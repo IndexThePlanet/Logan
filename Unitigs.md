@@ -4,7 +4,7 @@
 
 Unitigs for all SRA accessions. 
 
-[Unitigs](https://github.com/GATB/bcalm/blob/master/bidirected-graphs-in-bcalm2/bidirected-graphs-in-bcalm2.md#unitigs-and-compaction) (non-branching paths of the de Bruijn graph, here k=31) are provided in FASTA format, with BCALM2-style links allowing for quick conversion to GFA. Unitigs were constructed using a modified version of [Cuttlefish2](https://github.com/rchikhi/cuttlefish/) which records approximate mean k-mer abundance per unitig. In total 27.3 million accessions were processed.
+[Unitigs](https://github.com/GATB/bcalm/blob/master/bidirected-graphs-in-bcalm2/bidirected-graphs-in-bcalm2.md#unitigs-and-compaction) (non-branching paths of the de Bruijn graph, here k=31) are provided in FASTA format. Unitigs were constructed using a modified version of [Cuttlefish2](https://github.com/rchikhi/cuttlefish/) which records approximate mean k-mer abundance per unitig. In total 27.3 million accessions were processed.
 
 ## Data format
 
@@ -13,6 +13,8 @@ Unitigs are stored in FASTA format. The FASTA header is as follows:
     >[accession]_[counter] ka:i:[abundance]
 
 Where `accession` is the accession name (e.g. SRR11905265), `counter` is a 0-based integer counter, `abundance` is the mean approximate k-mer abundance over the unitig.
+
+Additional FASTA header in the form ̀L:i:x` are BCALM2-style links allowing for quick conversion to GFA. Note: in some large accessions, the `ka:i:[xx]` field is replaced by `km:i:[xx]`, this is a bug, consider that they are the same information.
 
 ## Data access
 
