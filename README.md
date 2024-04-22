@@ -57,4 +57,5 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 - Amazon Web Services
 - Registry of Open Data on AWS
 
-![image](https://github.com/IndexThePlanet/Logan/assets/1218301/189ff4b9-1ecc-4d65-b3f6-7ebee0583bdf)
+![image](https://github.com/IndexThePlanet/Logan/assets/1218301/daa6b5d9-78d0-4da9-aa68-27f329e1d3a8)
+
