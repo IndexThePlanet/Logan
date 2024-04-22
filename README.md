@@ -51,7 +51,7 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 ## Funding
 
-- Institut Pasteur G5 Junior Group, INCEPTION project
+- Institut Pasteur G5 Sequence Bioinformatics, ANR INCEPTION 
 - PaRis Artificial Intelligence Research Institute (PRAIRIE)
 - ERC Consolidator grant number 101088572 (IndexThePlanet)
 - Amazon Web Services
