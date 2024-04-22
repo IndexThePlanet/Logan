@@ -52,3 +52,5 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 ## Funding
 
 ERC Consolidator grant number 101088572 (IndexThePlanet), Amazon Web Service, Registry of Open Data on AWS
+
+![image](https://github.com/IndexThePlanet/Logan/assets/1218301/189ff4b9-1ecc-4d65-b3f6-7ebee0583bdf)
