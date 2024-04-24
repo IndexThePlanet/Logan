@@ -30,3 +30,10 @@ Relative space taken by unitigs bases vs raw reads bases:
 Relative space taken by contigs bases vs raw reads bases: 
 
 ![image](https://github.com/IndexThePlanet/Logan/assets/1218301/c30627c0-8728-4590-bd92-a80045e9d87d)
+
+## Library source breakdown
+
+* metagenomes: 4,791,129 accessions, 43.4 TB compressed Logan contig contigs
+* metatranscriptomes: 129,974 accessions, 2.6 TB compressed Logan contigs
+* transcriptomes: 4,929,361 accessions, 80.9 TB compressed Logan contigs
+* 
