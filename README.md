@@ -43,12 +43,22 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
   - Greg Autric
   - Maxime Hugues
 - AWS management:
-  -  Dorian Schaal
-  -  Adrien Lainé
+  - Dorian Schaal
+  - Adrien Lainé
 - Institut Pasteur IT:
   - Thomas Menard
   - Stéphane Fournier
 
+## Acknowledgements
+
+- AWS Registry of Open Data
+  - Peter Schmiedeskamp
+  - Chris Stoner
+  - Erin Chu
+- NCBI SRA
+  - Ryan Connor
+  - Yuriy Skripchenko
+    
 ## Funding
 
 - Institut Pasteur G5 Sequence Bioinformatics, ANR INCEPTION 
