@@ -34,7 +34,7 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 ## Team
 
 - Lead: Rayan Chikhi
-- Artem Babaian
+- co-Lead: Artem Babaian
 - Robert C. Edgar
 - Anton Korobeynikov
 - Brice Raffestin
