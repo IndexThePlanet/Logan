@@ -10,7 +10,7 @@ Unitigs for all SRA accessions.
 
 Unitigs are stored in FASTA format. The FASTA header is as follows:
 
-    >[accession]_[counter] ka:i:[abundance]
+    >[accession]_[counter] ka:f:[abundance]
 
 Where `accession` is the accession name (e.g. SRR11905265), `counter` is a 0-based integer counter, `abundance` is the mean approximate k-mer abundance over the unitig.
 
