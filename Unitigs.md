@@ -12,9 +12,9 @@ Unitigs are stored in FASTA format. The FASTA header is as follows:
 
     >[accession]_[counter] ka:f:[abundance]
 
-Where `accession` is the accession name (e.g. SRR11905265), `counter` is a 0-based integer counter, `abundance` is the mean approximate k-mer abundance over the unitig.
+Where `accession` is the accession name (e.g. SRR11905265), `counter` is a 0-based integer counter, `abundance` is the average count of all k-mers over the entire unitig (approximated, see "Theoretical guarantees" section).
 
-Additional FASTA header in the form `L:i:x` are BCALM2-style links allowing for quick conversion to GFA. Note: in some large accessions, the `ka:i:[xx]` field is replaced by `km:i:[xx]`, this is a bug, consider that they are the same information.
+Additional FASTA header in the form `L:i:x` are BCALM2-style links allowing for quick conversion to GFA. Note: in some large accessions, the `ka:f:[xx]` field is replaced by `km:f:[xx]`, this is a bug, consider that they are the same information.
 
 ## Data access
 
@@ -50,4 +50,4 @@ Note: unitigs (and contigs) were compressed using [f2sz](https://github.com/asl/
 
 Any 31-mer that occurs more than twice in the original SRA reads of an accession will appear in the unitigs. Conversely, any 31-mer in the unitigs is also present somewhere in the SRA reads of the accession. 
 
-The reported mean abundance `ka:i:xxx` in the header of the unitigs is an approximation of how many reads each k-mer of that sequence occurs, on average. It is the product of two approximations: 1) Cuttlefish2 records abundances for k+1-mers and not k-mers, hence the abundance of a k-mer was obtained by summing all the abundances of the k+1-mers it appears in, then divided by two. 2) To save memory during Cuttlefish2, small abundances of k-mers were accurate within 5% error, and large abundances were capped at 50,000. This means that all abundances larger than 50,000 will be reported to be equal to 50,000. More information on the discretization scheme are [here](https://github.com/GATB/gatb-core/blob/b1a27642f873904838bef1b7d9224acdfb0c78fa/gatb-core/src/gatb/tools/collections/impl/MapMPHF.hpp#L84).
+The reported mean abundance `ka:f:xxx` in the header of the unitigs is an approximation of how many reads each k-mer of that sequence occurs, on average. It is the product of two approximations: 1) Cuttlefish2 records abundances for k+1-mers and not k-mers, hence the abundance of a k-mer was obtained by summing all the abundances of the k+1-mers it appears in, then divided by two. 2) To save memory during Cuttlefish2, small abundances of k-mers were accurate within 5% error, and large abundances were capped at 50,000. This means that all abundances larger than 50,000 will be reported to be equal to 50,000. More information on the discretization scheme are [here](https://github.com/GATB/gatb-core/blob/b1a27642f873904838bef1b7d9224acdfb0c78fa/gatb-core/src/gatb/tools/collections/impl/MapMPHF.hpp#L84).
