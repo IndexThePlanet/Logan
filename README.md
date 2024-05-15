@@ -61,9 +61,11 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
     
 ## Funding
 
-- Institut Pasteur G5 Sequence Bioinformatics, ANR INCEPTION 
-- PaRis Artificial Intelligence Research Institute (PRAIRIE)
+- Institut Pasteur G5 Sequence Bioinformatics, ANR INCEPTION
 - ERC Consolidator grant number 101088572 (IndexThePlanet)
+- ANR-19-CE45-0008 (SeqDigger), ANR-22-CE45-0007 (Full-RNA)
+- EU H2020 Marie Sklodowska-Curie grants agreements No 956229 (Alpaca) and 872539 (Pangaia)
+- PaRis Artificial Intelligence Research Institute (PRAIRIE)
 - Amazon Web Services
 - Registry of Open Data on AWS
 
