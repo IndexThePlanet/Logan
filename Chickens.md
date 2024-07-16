@@ -48,7 +48,7 @@ Instead, consider using Logan to directly map contigs to the gene of interest:
 
 ```
 minimap2 -t 8 -a mc1r.fa \
-          <(aws s3 cp s3://logan-pub/c/$accession/$accession.contigs.fa.zst - | zstdcat) \
+          <(aws s3 cp s3://logan-pub/c/$accession/$accession.contigs.fa.zst - --no-sign-request | zstdcat) \
     | samtools view -hF4 - \
     > mapping-logan/$accession.minimap2_output
 ```
