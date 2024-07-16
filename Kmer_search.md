@@ -20,7 +20,7 @@ pip install rcgrep
 Then download the accession using the AWS CLI (see [Contigs.md](Contigs.md)): 
 
 ```
-aws s3 cp s3://logan-pub/u/DRR000016/DRR000016.unitigs.fa.zst .
+aws s3 cp s3://logan-pub/u/DRR000016/DRR000016.unitigs.fa.zst . --no-sign-request
 ```
 
 ## Running
