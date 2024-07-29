@@ -31,7 +31,7 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 [Downloading, mapping many contigs to a gene of interest](Chickens.md)
 
-## How to cite
+## How to cite
 
 Official Logan dataset URL: https://registry.opendata.aws/pasteur-logan/
 
