@@ -35,6 +35,22 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 Official Logan dataset URL: https://registry.opendata.aws/pasteur-logan/
 
+BibTeX:
+
+```
+@article {logan,
+	author = {Chikhi, Rayan and Raffestin, Brice and Korobeynikov, Anton and Edgar, Robert and Babaian, Artem},
+	title = {Logan: Planetary-Scale Genome Assembly Surveys Life{\textquoteright}s Diversity},
+	elocation-id = {2024.07.30.605881},
+	year = {2024},
+	doi = {10.1101/2024.07.30.605881},
+	publisher = {Cold Spring Harbor Laboratory},
+	eprint = {https://www.biorxiv.org/content/early/2024/07/31/2024.07.30.605881.full.pdf},
+	journal = {bioRxiv}
+}
+```
+
+
 ## Team
 
 - Lead: Rayan Chikhi
