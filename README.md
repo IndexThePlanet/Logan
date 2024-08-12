@@ -58,7 +58,6 @@ BibTeX:
 - Robert C. Edgar
 - Anton Korobeynikov
 - Brice Raffestin
-- Matthieu Falce
 - AWS engineering:
   - Greg Autric
   - Maxime Hugues
@@ -78,6 +77,11 @@ BibTeX:
 - NCBI SRA
   - Ryan Connor
   - Yuriy Skripchenko
+- Matthieu Falce
+- Institut Pasteur admin:
+  - Melanie Ridel
+  - Loïc Orellou
+  - Florence Percie du Sert
     
 ## Funding
 
