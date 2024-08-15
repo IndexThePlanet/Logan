@@ -20,6 +20,10 @@ To download one accession, using the [AWS CLI](https://aws.amazon.com/cli/), typ
     
     aws s3 cp s3://logan-pub/c/[accession]/[accession].contigs.fa.zst . --no-sign-request
 
+e.g. for accession SRR11905265, type:
+
+    aws s3 cp s3://logan-pub/c/SRR11905265/SRR11905265.contigs.fa.zst . --no-sign-request
+
 ## Decompression
 
 To decompress a single unitigs file, type:
