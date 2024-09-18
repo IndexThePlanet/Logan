@@ -16,13 +16,18 @@ Careful, this S3 bucket is huge. The total size of all unitigs is 385 terabytes 
 
 ## Downloading 
 
-To download one accession, using the [AWS CLI](https://aws.amazon.com/cli/), type:
+To download one accession, type: 
+
+    wget https://s3.amazonaws.com/logan-pub/c/[accession]/[accession].contigs.fa.zst 
+
+e.g. for accession [SRR11905265](https://www.ncbi.nlm.nih.gov/sra/?term=SRR11905265), type:
+
+    wget https://s3.amazonaws.com/logan-pub/c/SRR11905265/SRR11905265.contigs.fa.zst 
+
+Faster downloads are using the [AWS CLI](https://aws.amazon.com/cli/) (you do not need an AWS account), type:
     
     aws s3 cp s3://logan-pub/c/[accession]/[accession].contigs.fa.zst . --no-sign-request
 
-e.g. for accession SRR11905265, type:
-
-    aws s3 cp s3://logan-pub/c/SRR11905265/SRR11905265.contigs.fa.zst . --no-sign-request
 
 ## Decompression
 
