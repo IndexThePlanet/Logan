@@ -20,13 +20,17 @@ Additional FASTA header in the form `L:i:x` are BCALM2-style links allowing for 
 
 Unitigs are available via AWS S3 at the `s3://logan-pub` bucket in folder `/u/`.
 
-To download unitigs for one accession, using the [AWS CLI](https://aws.amazon.com/cli/) (you do not need an AWS account), type:
-    
-    aws s3 cp s3://logan-pub/u/[accession]/[accession].unitigs.fa.zst . --no-sign-request
+To download unitigs for one accession, you may type:
+
+    wget https://s3.amazonaws.com/logan-pub/u/[accession]/[accession].unitigs.fa.zst 
 
 e.g. for accession [SRR11905265](https://www.ncbi.nlm.nih.gov/sra/?term=SRR11905265), type:
 
-    aws s3 cp s3://logan-pub/u/SRR11905265/SRR11905265.unitigs.fa.zst . --no-sign-request
+    wget https://s3.amazonaws.com/logan-pub/u/SRR11905265/SRR11905265.unitigs.fa.zst 
+
+Faster downloads are using the [AWS CLI](https://aws.amazon.com/cli/) (you do not need an AWS account), type:
+    
+    aws s3 cp s3://logan-pub/u/[accession]/[accession].unitigs.fa.zst . --no-sign-request
 
 ## Directory structure
 
