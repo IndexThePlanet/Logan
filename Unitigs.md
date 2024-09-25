@@ -54,9 +54,9 @@ Note: unitigs (and contigs) were compressed using [f2sz](https://github.com/asl/
 
 To recover the `.gfa` assembly graph, use the [convertToGFA.py](https://github.com/GATB/bcalm/blob/master/scripts/convertToGFA.py) script as follows:
 
-    # need to remove the xRRxxxxx_ header from FASTA file, replace SRR11905265 by your accession name
-    sed -i 's/SRR11905265_//g' SRR11905265.unitigs.fa
-    python convertToGFA.py SRR11905265.unitigs.fa SRR11905265.unitigs.gfa 31
+    # need to remove the xRRxxxxx_ header from FASTA file
+    sed -i 's/>.*_/>/' [accession].unitigs.fa
+    python convertToGFA.py [accession].unitigs.fa [accession].unitigs.gfa 31
 
 
 ## Theoretical guarantees
