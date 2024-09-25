@@ -50,6 +50,15 @@ To decompress a single unitigs file, type:
 
 Note: unitigs (and contigs) were compressed using [f2sz](https://github.com/asl/f2sz), which is a FASTA-aware block compressed zstd format. In principle one can decompress in parallel.
 
+## Assembly graph
+
+To recover the `.gfa` assembly graph, use the [convertToGFA.py](https://github.com/GATB/bcalm/blob/master/scripts/convertToGFA.py) script as follows:
+
+    # need to remove the xRRxxxxx_ header from FASTA file, replace SRR11905265 by your accession name
+    sed -i 's/SRR11905265_//g' SRR11905265.unitigs.fa
+    python convertToGFA.py SRR11905265.unitigs.fa SRR11905265.unitigs.gfa 31
+
+
 ## Theoretical guarantees
 
 Any 31-mer that occurs more than twice in the original SRA reads of an accession will appear in the unitigs. Conversely, any 31-mer in the unitigs is also present somewhere in the SRA reads of the accession. 
