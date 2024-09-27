@@ -35,6 +35,13 @@ To decompress a single unitigs file, type:
 
     zstd -d [accession].contigs.fa.zst
 
+## Data format
+
+Same headers metadata as in the unitigs, see [there](https://github.com/IndexThePlanet/Logan/blob/main/Unitigs.md#data-format) for an explanation of:
+
+    >[accession]_[counter] ka:f:[abundance] L:i:[..]
+    
+
 ## Theoretical guarantees
 
 Contigs do not enjoy the same theoretical guarantees as the [unitigs](https://github.com/IndexThePlanet/Logan/blob/main/Unitigs.md#theoretical-guarantees). Except that, any 31-mer present in the contigs is guaranteed to also appear in the reads. Abundances are reported in the same way as in unitigs.
