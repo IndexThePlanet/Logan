@@ -2,6 +2,8 @@
 
 ## General statistics
 
+Cutoff date: December 10th, 2023
+
 * 27.3 million accessions assembled into unitigs, totalling 96.00% of the SRA by size (48.2 petabases of raw reads)
 * 26.8 million accessions assembled into contigs (around 88% by size)
 * 2.18 petabytes of unitigs compressed (s3://logan-pub/u/)
