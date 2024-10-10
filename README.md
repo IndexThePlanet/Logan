@@ -7,6 +7,10 @@ Photo source: https://www.karmactive.com/mount-logan-the-crown-jewel-of-canadas-
 
 Logan is a dataset of DNA and RNA sequences. It has been constructed by performing genome assembly over a December 2023 freeze of the entire NCBI Sequence Read Archive, which at the time contained 50 petabases of public raw data. Two related sets of assembled sequences are released: unitigs and contigs. Unitigs preserve nearly all the information present in the original sample, whereas contigs get rid of sequencing errors and biological variation for the benefit of increased sequence length. Both sets are hosted on a public S3 bucket provided by the Registry of Open Data at AWS, in compressed form. By downloading either unitigs or contigs, users can access the wealth of information contained in the SRA 10x (respectively 40x for contigs) more efficiently in time and disk space compared to raw reads, with minor loss of sensitivity and higher contiguity.
 
+## Preprint
+
+Read more about Logan here: https://www.biorxiv.org/content/10.1101/2024.07.30.605881v1
+
 ## SRA size
 
 In December 2023, the public part of SRA consisted of raw sequencing data totalling 50 petabases across 27 million accessions. Each accession corresponds to a DNA sequencing experiment performed by a biology lab somewhere around the world. As you can see below, the majority of accessions and bases are DNA, followed by Covid samples and RNA, then metagenomes and single-cell.
