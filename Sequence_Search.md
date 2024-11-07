@@ -48,16 +48,14 @@ This will create the file `selected_sequences_DRR000016.txt` containing  contig 
 
 ```
 >DRR000016_0 ka:f:222.632     14 0.88608 
-TCATCAATAGATGGAGACATACAGAAATAGTCAAACCACATCTACAAAATGCCAGTATCAGGCGGCGGCTTCGAAGCCAA
-...
+TCATCAATAGATGGAGACATACAGAAATAGTCAAACCACATCTACAAAATGCCAGTATCAGGCGGCGGCTTCGAAGCCAA...
 ```
 
 **Note:** Adding option `--output-mapping-positions` enables to obtain the location of the k-mers of the queried sequence in the obtained contig:
 
 ```
 >DRR000016_0 ka:f:222.632     14 0.88608 8 9 10 11 12 13 14 15 16 17 18 19 20 21
-TCATCAATAGATGGAGACATACAGAAATAGTCAAACCACATCTACAAAATGCCAGTATCAGGCGGCGGCTTCGAAGCCAA
-...
+TCATCAATAGATGGAGACATACAGAAATAGTCAAACCACATCTACAAAATGCCAGTATCAGGCGGCGGCTTCGAAGCCAA...
 ```
 
 back_to_sequences has other ther usages and options. Check the [doc](https://b2s-doc.readthedocs.io/en/latest/index.html)
