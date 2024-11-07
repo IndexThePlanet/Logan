@@ -33,6 +33,8 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 [Search for a k-mer of interest inside an unitigs accession](Kmer_search.md)
 
+[Search for a sequence (of length $\geq k$) of interest inside an unitigs/contigs accession](Sequence_Search.md)
+
 [Downloading, mapping many contigs to a gene of interest](Chickens.md)
 
 ## How to cite
