@@ -1,16 +1,15 @@
-# Search for a sequence of interest (of size $\geq k$) inside an unitigs/contig accession
+# Search for unitigs or contigs similar to a sequence of interest (of size $\geq k$)
 
 ## Introduction
-
-Suppose you want to search for a sequence of interest inside the contigs of a particular accession.
+Given an accession numner, suppose you want to find either unitigs or contigs similar to a queri sequence.
 
 For the sake of the example, we will pick:
 
 * Accession: `DRR000016`
-* Sequence to find (in a `query.fa` file):
+* Sequence queried (in a `query.fa` file):
 ```
 >query
-AGATGGAGACATACAGAAATAGTCAAACCACATCTACAAAATGC
+AGATGGAGACATACAGAAATAGTCAAACCACATACTACAAAATGCCTACAAAATGCCAGTATCAGGCGGCGGCTTCG
 ```
 
 ## Setting up
@@ -36,26 +35,31 @@ aws s3 cp s3://logan-pub/u/DRR000016/DRR000016.unitigs.fa.zst . --no-sign-reques
 aws s3 cp s3://logan-pub/c/DRR000016/DRR000016.contigs.fa.zst . --no-sign-request
 ```
 
-For the remaining of this example, we focus in contigs: 
+For the remaining of this example, we focus in contigs.
 
 ## Running back_to_sequences
 
 ```
- back_to_sequences --in-kmers query.fa --in-sequences  DRR000016.contigs.fa.zst --out-sequences selected_sequences_DRR000016.txt
+back_to_sequences --in-kmers query.fa --in-sequences  DRR000016.contigs.fa.zst --out-sequences selected_sequences_DRR000016.txt
 ```
 
 This will create the file `selected_sequences_DRR000016.txt` containing  contig containing the query:
 
 ```
->DRR000016_0 ka:f:222.632     14 0.88608 
+>DRR000016_0 ka:f:222.632     5 0.31646 
 TCATCAATAGATGGAGACATACAGAAATAGTCAAACCACATCTACAAAATGCCAGTATCAGGCGGCGGCTTCGAAGCCAA...
 ```
+There are five 31-mers from the query are found in the sequence. This is 0.31% of the full contig `DRR000016_0`
 
 **Note:** Adding option `--output-mapping-positions` enables to obtain the location of the k-mers of the queried sequence in the obtained contig:
 
 ```
->DRR000016_0 ka:f:222.632     14 0.88608 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+>DRR000016_0 ka:f:222.632     5 0.31646 8 9 10 41 42
 TCATCAATAGATGGAGACATACAGAAATAGTCAAACCACATCTACAAAATGCCAGTATCAGGCGGCGGCTTCGAAGCCAA...
 ```
+The five 31-mers are located positions $\{8,9,10,41,\text{and } 42\}$ on the contig `DRR000016_0`.
+
+
+## Read the doc
 
 back_to_sequences has other ther usages and options. Check the [doc](https://b2s-doc.readthedocs.io/en/latest/index.html)
