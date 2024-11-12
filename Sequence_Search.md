@@ -26,6 +26,8 @@ More details here: https://github.com/IndexThePlanet/LoganSearch
 
 ## Method 1: `grep`-like approach
 
+This was formerly the "[Search for a k-mer of interest inside an unitigs accession](Kmer_search.md)" tutorial.
+
 You will need [rcgrep](https://github.com/dib-lab/rcgrep):
 
 ```
