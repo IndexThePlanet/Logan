@@ -1,46 +1,99 @@
-# Search for unitigs or contigs similar to a sequence of interest
+# Searching for sequences inside unitigs or contigs
 
 ## Introduction
-Given an accession number, suppose you want to find either unitigs or contigs similar to a query sequence (of size $\geq k$).
+Given an accession number, suppose you have a query sequence (of size $\geq k$) and want to find contigs / unitigs containing that sequence.
 
 For the sake of the example, we will pick:
 
 * Accession: `DRR000016`
+* Sequence to search `AGATGGAGACATACAGAAATAGTCAAACCACATACTACAAAATGCCTACAAAATGCCAGTATCAGGCGGCGGCTTCG`
+
+There are three methods, with  increased sophistication:
+
+1. Logan Search, to search across all accessions
+2. `grep` to search for one sequence in one accession
+3. `back_to_sequences` to search for many sequences in one accession
+
+## Method 0: Logan Search
+
+You may use the Logan Search service to perform sequence search across Logan data:
+
+https://logan-search.org/
+
+This will return a list of accessions where your query is likely present. The service also uses `back_to_sequences` (presented later in this tutorial) to determine which unitig/contig sequence matches the query.
+
+More details here: https://github.com/IndexThePlanet/LoganSearch
+
+## Method 1: `grep`-like approach
+
+You will need [rcgrep](https://github.com/dib-lab/rcgrep):
+
+```
+pip install rcgrep
+```
+
+Then download the accession using the AWS CLI (see [Contigs.md](Contigs.md)): 
+
+```
+aws s3 cp s3://logan-pub/u/DRR000016/DRR000016.unitigs.fa.zst . --no-sign-request
+```
+
+To search for the k-mer within all the unitigs of the accession, including potential occurrences where this k-mer appears in reverse-complement form, type:
+
+```
+zstdcat DRR000016.unitigs.fa.zst | rcgrep -q TTTGGGTTCTTGTTTTCCCTCA --grepargs "-B 1 --no-group-separator" -
+```
+
+will output:
+
+```
+>DRR000016_912088 ka:f:1.7
+CACAATGTTTGGGTTCTTGTTTTCCCTCATGACCAG
+```
+
+Which is in fact the only location where this k-mer occurs.
+
+Searching for a shorter k-mer TTTGGGTTCTTA yields:
+
+```
+zstdcat DRR000016.unitigs.fa.zst | rcgrep -q TTTGGGTTCTTA --grepargs "-B 1 --no-group-separator" -
+```
+
+```
+>DRR000016_644893 ka:f:1.6
+CTTCATTTGGGTTCTTATCAGGATGGTACTTCAAG
+>DRR000016_689157 ka:f:1.8
+AAACCGTGTATCAATAGTTTGGGTTCTTAGTTTGCT
+```
+
+Note that Linux [process substitution](https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html#Process-Substitution) is not supported by rcgrep, hence the requirement to do `zstdcat [file] | rcgrep [..] - `.
+
+## Method 2: `back_to_sequences` tool
+
+The `back_to_sequences` tool segments the query into k-mers, providing sequence-wide presence and orientation data of each k-mer in matched unitig/contig sequences.
+
+To install [back_to_sequences](https://github.com/pierrepeterlongo/back_to_sequences):
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+git clone https://github.com/pierrepeterlongo/back_to_sequences.git
+cd back_to_sequences && cargo install --path .
+```
+
+Download the accession using the AWS CLI (see [Unitigs.md](Unitigs.md) and [Contigs.md](Contigs.md)): 
+
+```bash
+# for contigs: 
+aws s3 cp s3://logan-pub/c/DRR000016/DRR000016.contigs.fa.zst . --no-sign-request
+```
+
 * Sequence queried (to be stored in a `query.fa` file):
 ```
 >query
 AGATGGAGACATACAGAAATAGTCAAACCACATACTACAAAATGCCTACAAAATGCCAGTATCAGGCGGCGGCTTCG
 ```
 
-## Setting up 
-
-You will need [back_to_sequences](https://github.com/pierrepeterlongo/back_to_sequences):
-
-```bash
-# install rust if not already installed:
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# install back to sequences:
-git clone https://github.com/pierrepeterlongo/back_to_sequences.git
-cd back_to_sequences
-cargo install --path .
-```
-You may remove the created `back_to_sequences` directory once installed.
-
-## Get the data and run back_to_sequences
-### Get the unitig or contig file:
-
-Download the accession using the AWS CLI (see [Unitigs.md](Unitigs.md) and [Contigs.md](Contigs.md)): 
-
-```bash
-# for unitigs: 
-aws s3 cp s3://logan-pub/u/DRR000016/DRR000016.unitigs.fa.zst . --no-sign-request
-# for contigs: 
-aws s3 cp s3://logan-pub/c/DRR000016/DRR000016.contigs.fa.zst . --no-sign-request
-```
-
-For the rest of this example, we focus on contigs.
-
-### Run back_to_sequences
+Here it is a single sequence, but multiple query sequences are supported too.
 
 ```
 back_to_sequences --in-kmers query.fa --in-sequences  DRR000016.contigs.fa.zst --out-sequences selected_sequences_DRR000016.txt
@@ -62,7 +115,4 @@ TCATCAATAGATGGAGACATACAGAAATAGTCAAACCACATCTACAAAATGCCAGTATCAGGCGGCGGCTTCGAAGCCAA
 ```
 The five 31-mers are located positions $\{8,9,10,41,\text{and } 42\}$ on the contig `DRR000016_0`.
 
-
-## Read the doc
-
-back_to_sequences has other usages and options. Check the [doc](https://b2s-doc.readthedocs.io/en/latest/index.html)
+`back_to_sequences` has other usages and options. Check the [doc](https://b2s-doc.readthedocs.io/en/latest/index.html)
