@@ -31,9 +31,7 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 [Downloading unitigs of several accessions](Accessions.md)
 
-[Search for a k-mer of interest inside an unitigs accession](Kmer_search.md)
-
-[Search for unitigs or contigs similar to a sequence of interest](Sequence_Search.md)
+[Search for sequences inside unitigs or contigs](Sequence_Search.md)
 
 [Downloading, mapping many contigs to a gene of interest](Chickens.md)
 
