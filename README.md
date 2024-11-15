@@ -35,6 +35,12 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 [Downloading, mapping many contigs to a gene of interest](Chickens.md)
 
+## Related resources
+
+[Logan Search](https://logan-search.org/)
+
+[Logan talk at CGSI 2024](https://www.youtube.com/watch?v=H-8L_hFWXCQ)
+
 ## How to cite
 
 Official Logan dataset URL: https://registry.opendata.aws/pasteur-logan/
