@@ -23,6 +23,10 @@ Note, the y-axis of the second panel is in megabases, as this is the preferred u
 
 All sequencing experiments from a December 2023 freeze of the SRA have been reconstructed and made available as unitigs and contigs as a v1 release of Logan. See the [Stats v1](Stats-v1.md) page for more details on this data.
 
+## v1.1 release
+
+All v1 contigs were recomputed to increase contiguity and fix spurious repetitions. See [Stats v1.1](Stats-v1.1.md) page for more details on this data.
+
 ## Data access
 
 See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
