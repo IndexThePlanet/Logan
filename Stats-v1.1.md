@@ -13,7 +13,7 @@
 Same as v1, except total contigs size. Cutoff date: December 10th, 2023
 
 * 27.3 million accessions assembled into unitigs, totalling 96.00% of the SRA by size (48.2 petabases of raw reads)
-* 26.8 million accessions assembled into contigs (around 88% by size)
+* 26.8 million accessions assembled into contigs (specifically 26,788,835, around 88% of SRA by size)
 * 2.18 petabytes of unitigs compressed (s3://logan-pub/u/)
 * 315 terabytes of contigs compressed (s3://logan-pub/c/)
 
