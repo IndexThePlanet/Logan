@@ -24,6 +24,9 @@ This will return a list of accessions where your query is likely present. The se
 
 More details here: https://github.com/IndexThePlanet/LoganSearch
 
+<details open>
+<summary>More methods (technical)</summary>
+
 ## Method 1: `grep`-like approach
 
 This was formerly the "[Search for a k-mer of interest inside an unitigs accession](Kmer_search.md)" tutorial.
@@ -118,3 +121,6 @@ TCATCAATAGATGGAGACATACAGAAATAGTCAAACCACATCTACAAAATGCCAGTATCAGGCGGCGGCTTCGAAGCCAA
 The five 31-mers are located positions $\{8,9,10,41,\text{and } 42\}$ on the contig `DRR000016_0`.
 
 `back_to_sequences` has other usages and options. Check the [doc](https://b2s-doc.readthedocs.io/en/latest/index.html)
+
+
+</details>
