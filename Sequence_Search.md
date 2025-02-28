@@ -24,7 +24,7 @@ This will return a list of accessions where your query is likely present. The se
 
 More details here: https://github.com/IndexThePlanet/LoganSearch
 
-<details open>
+<details>
 <summary>More methods (technical)</summary>
 
 ## Method 1: `grep`-like approach
