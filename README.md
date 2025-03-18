@@ -37,7 +37,7 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 [Search for sequences inside unitigs or contigs](Sequence_Search.md)
 
-[Downloading, mapping many contigs to a gene of interest](Chickens.md)
+[Downloading, mapping many contigs to a gene of interest for a species of interest](Chickens.md)
 
 ## Related resources
 
