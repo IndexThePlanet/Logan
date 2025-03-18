@@ -1,4 +1,4 @@
-# Download then map contigs to a gene of interest
+# Download then map contigs to a gene of interest for a species of interest
 
 ## Introduction
 
