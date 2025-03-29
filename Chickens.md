@@ -6,7 +6,7 @@ In this tutorial, we will explain how to download all contigs from a pre-defined
 
 ## Getting a list of accessions
 
-This part is outside of the scope of Logan, but we will describe it for completeness. Assume you are interested in obtaining all accessions in the SRA that contain a chicken genome. Here I am skipping a lot of steps, but the high level description is that you may use [AWS Athena](https://www.ncbi.nlm.nih.gov/sra/docs/sra-athena-examples/) for that, with the query:
+This part is not strictly specific to Logan, as it is about selecting SRA accessions. Assume you are interested in obtaining all accessions in the SRA that contain a chicken genome. Here I am skipping a lot of steps, but the high level description is that you may use [AWS Athena](https://www.ncbi.nlm.nih.gov/sra/docs/sra-athena-examples/) for that, with the query:
 
 ```
    SELECT *
