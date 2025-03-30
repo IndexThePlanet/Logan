@@ -14,7 +14,7 @@ Then, type this command:
     awk -F',' '$4 == "\"9606\"" { print }' \
     > list_accessions_human.txt
 
-What this does, is stream a file from the Logan bucket that contains a list of all SRA accessions in Logan, along with some metadata extracted from the SRA (library type, species name, species tax ID, I forgot the last two fields). For other species, change 9606 in the command to the correct tax ID.
+What this does, is stream a file from the Logan bucket that contains a list of all SRA accessions in Logan, along with some metadata extracted from the SRA (library type, species name, species tax ID, I forgot the last two fields). For other species, change 9606 in the command to the correct `tax_id`.
 
 This gives you a list of SRA accessions that are annotated as belonging to that species. But of course, not all Logan contigs of those accession will be from that species, e.g. think of the contaminating viruses, bacteria, etc..
 
@@ -26,7 +26,7 @@ Basically, NCBI has annotated the entire SRA with a rough taxonomy of each acces
 
 You can access this data through the cloud, following this provided tutorial: https://www.ncbi.nlm.nih.gov/sra/docs/sra-athena-examples/
 
-Then, same idea as the previous method, if you have a species name of interest, you can get a list of accession using a SQL query:
+Then, same principle as the previous method: if you have a species name of interest, you can get a list of accessions. Here, it is with a SQL query:
 
     SELECT *
     FROM "sra"."tax_analysis"
