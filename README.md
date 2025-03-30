@@ -33,6 +33,8 @@ See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
 
 ## Tutorials
 
+[Get a list of SRA accessions](SRA_list.md)
+
 [Downloading unitigs of several accessions](Accessions.md)
 
 [Search for sequences inside unitigs or contigs](Sequence_Search.md)
