@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a short tutorial to explain how to get a list of SRA accessions from a particular species. This is not specific to Logan, as it is about advanced SRA browsing.
+This is a short tutorial to explain how to get a list of SRA accessions from a particular species. (This is not specific to Logan, it is just some advanced SRA browsing.)
 
 ## Simple method (Logan-provided CSV)
 
