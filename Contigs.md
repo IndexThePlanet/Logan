@@ -12,7 +12,7 @@ Contigs are stored at the following location:
 
 ## Size
 
-Careful, this S3 bucket is huge. The total size of all unitigs is 385 terabytes compressed. It contains 26.7M files. Just listing the folder will take half an hour.
+Careful, this S3 bucket is huge. The total size of all contigs is 315 terabytes compressed. It contains 26.7M files. Just listing the folder will take half an hour.
 
 ## Downloading 
 
