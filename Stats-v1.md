@@ -57,3 +57,6 @@ Relative space taken by contigs bases vs raw reads bases:
 * metagenomes: 4,791,129 accessions, 43.4 TB compressed Logan contigs
 * metatranscriptomes: 129,974 accessions, 2.6 TB compressed Logan contigs
 * transcriptomes: 4,929,361 accessions, 80.9 TB compressed Logan contigs
+
+Using a different counting method, metagenomes: 5,866,706 accessions, 3.7 Pbp in reads
+(Athena: `consent = 'public' AND avgspotlen >= 31 AND releasedate <= date_parse('2023-12-10','%Y-%m-%d') and organism like )'%metagenom%' 
