@@ -14,7 +14,7 @@ Then, type this command:
     awk -F',' '$4 == "\"9606\"" { print }' \
     > list_accessions_human.txt
 
-What this does, is stream a file from the Logan bucket that contains a list of all SRA accessions in Logan, along with some metadata extracted from the SRA (library type, species name, species tax ID, I forgot the last two fields). For other species, change 9606 in the command to the correct `tax_id`.
+What this does, is stream a file from the Logan bucket that contains a list of all SRA accessions in Logan, along with some metadata extracted from the SRA (library type, organism name, organism tax ID, taxon rank, I forgot the last field). For other species, change 9606 in the command to the correct `tax_id`.
 
 This gives you a list of SRA accessions that are annotated as belonging to that species. But of course, not all Logan contigs of those accession will be from that species, e.g. think of the contaminating viruses, bacteria, etc..
 
