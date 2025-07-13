@@ -34,7 +34,7 @@ Then, same principle as the previous method: if you have a species name of inter
 
 It will grab the list of accessions where there are sufficiently many reads from that species, and for each accession you have the `total_count` field, which very roughly approximates the number of reads from that accession corresponding to the species (but think of it as a subsampled number).
 
-As an alternative to Amazon Athena or Google BigQuery, you can use [DuckDB](https://duckdb.org/) to query SRA metadata stored as Parquet files in the cloud. This approach is simpler, as it does not require an account with a cloud provider, but it only provides the basic SRA metadata table and doesn't allow access to the taxonomy analysis table used in the example above.
+As an alternative to Amazon Athena or Google BigQuery, you can use [DuckDB](https://duckdb.org/) to query SRA metadata stored as Parquet files in the cloud. This approach is simpler, as it does not require an account with a cloud provider, but it only provides the basic SRA metadata table and doesn't allow access to the taxonomy analysis table used in the example above (see the list of available columns [here](https://www.ncbi.nlm.nih.gov/sra/docs/sra-cloud-based-metadata-table/)).
 
     duckdb -c "
     INSTALL httpfs;
