@@ -10,7 +10,7 @@ Suppose you want a list of all SRA accessions in Logan where the annotated speci
 
 Then, type this command:
 
-    aws s3 cp s3://logan-pub/stats/sra_taxid.csv.zst - | zstdcat | \
+    aws s3 cp s3://logan-pub/stats/sra_taxid.csv.zst - --no-sign-request | zstdcat | \
     awk -F',' '$4 == "\"9606\"" { print }' \
     > list_accessions_human.txt
 
