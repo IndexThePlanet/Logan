@@ -18,23 +18,11 @@ What this does, is stream a file from the Logan bucket that contains a list of a
 
 This gives you a list of SRA accessions that are annotated as belonging to that species. But of course, not all Logan contigs of those accession will be from that species, e.g. think of the contaminating viruses, bacteria, etc..
 
-## Advanced method (STAT)
+## Cloud database method 
 
-This one doesn't simply use the SRA metadata provided by submitters, but uses inferred taxonomy in sequences. An example usage is shown [in this other tutorial](https://github.com/IndexThePlanet/Logan/blob/main/Chickens.md#getting-a-list-of-accessions) as well.
+The SRA metadata data can also be accessed via the cloud using Amazon Athena or Google BigQuery. Detailed instructions are provided here: https://www.ncbi.nlm.nih.gov/sra/docs/sra-cloud/
 
-Basically, NCBI has annotated the entire SRA with a rough taxonomy of each accession. Check out their paper: https://pmc.ncbi.nlm.nih.gov/articles/PMC8450716/
-
-This data can be accessed via the cloud using Amazon Athena or Google BigQuery. Detailed instructions are provided here: https://www.ncbi.nlm.nih.gov/sra/docs/sra-cloud/
-
-Then, same principle as the previous method: if you have a species name of interest, you can get a list of accessions. Here, it is with a SQL query:
-
-    SELECT *
-    FROM "sra"."tax_analysis"
-    WHERE name = 'my species name, e.g. homo sapiens' AND total_count > 10000
-
-It will grab the list of accessions where there are sufficiently many reads from that species, and for each accession you have the `total_count` field, which very roughly approximates the number of reads from that accession corresponding to the species (but think of it as a subsampled number).
-
-As an alternative to Amazon Athena or Google BigQuery, you can use [DuckDB](https://duckdb.org/) to query SRA metadata stored as Parquet files in the cloud. This approach is simpler, as it does not require an account with a cloud provider, but it only provides the basic SRA metadata table and doesn't allow access to the taxonomy analysis table used in the example above (see the list of available columns [here](https://www.ncbi.nlm.nih.gov/sra/docs/sra-cloud-based-metadata-table/)).
+As an alternative to Amazon Athena or Google BigQuery, you can use [DuckDB](https://duckdb.org/) (installation instructions [here](https://duckdb.org/docs/installation/?version=stable&environment=cli&platform=macos&download_method=direct)) to query SRA metadata stored as Parquet files in the cloud. This approach is simpler, as it does not require an account with a cloud provider, but it only provides the basic SRA metadata table and doesn't allow access to the taxonomy analysis table used in the example above (see the list of available columns [here](https://www.ncbi.nlm.nih.gov/sra/docs/sra-cloud-based-metadata-table/)).
 
     duckdb -c "
     INSTALL httpfs;
@@ -48,3 +36,17 @@ As an alternative to Amazon Athena or Google BigQuery, you can use [DuckDB](http
     ) TO STDOUT WITH (FORMAT CSV, DELIMITER E'\t', HEADER);"
 
 The query above retrieves accessions released after 7 September 2021, where the associated samples were collected in Brazil.
+
+## Advanced method (STAT)
+
+This method doesn't simply use the SRA metadata provided by submitters, but uses inferred taxonomy in sequences. An example usage is shown [in this other tutorial](https://github.com/IndexThePlanet/Logan/blob/main/Chickens.md#getting-a-list-of-accessions) as well.
+
+NCBI has annotated the entire SRA with a rough taxonomy of each accession. Check out their paper: https://pmc.ncbi.nlm.nih.gov/articles/PMC8450716/
+
+Then, same principle as the previous two methods: if you have a species name of interest, you can get a list of accessions. Here, it is with a SQL query:
+
+    SELECT *
+    FROM "sra"."tax_analysis"
+    WHERE name = 'my species name, e.g. homo sapiens' AND total_count > 10000
+
+It will grab the list of accessions where there are sufficiently many reads from that species, and for each accession you have the `total_count` field, which very roughly approximates the number of reads from that accession corresponding to the species (but think of it as a subsampled number).
