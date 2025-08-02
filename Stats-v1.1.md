@@ -39,13 +39,13 @@ For unitigs and v1 contigs, see [v1 stats](Stats-v1.md).
 Example parser that prints `accession` and `seqstats_contigs_sumlen`:
 
 ```python
-    import sys, pyarrow.dataset as ds
-    d = ds.dataset(sys.argv[1], format="parquet").scanner(columns=["accession","seqstats_contigs_sumlen"])
-    print("accession\tseqstats_contigs_sumlen")
-    for b in d.to_batches():
-        a = b.column("accession"); s = b.column("seqstats_contigs_sumlen")
-        for i in range(b.num_rows):
-            print(f"{(a[i].as_py() or '')}\t{(s[i].as_py() or '')}")
+import sys,pyarrow.dataset as ds
+c=["accession","seqstats_contigs_sumlen"]
+sc=ds.dataset(sys.argv[1],format="parquet").scanner(columns=c)
+print(*c,sep="\t")
+for b in sc.to_batches():
+    for a,s in ((x.as_py() or "", y.as_py() or "") for x,y in zip(*(b.column(n) for n in c))):
+        print(a,s,sep="\t")
 ```
 
 Example usage:
