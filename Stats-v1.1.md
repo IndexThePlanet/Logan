@@ -36,6 +36,24 @@ It contains the following fields:
 
 For unitigs and v1 contigs, see [v1 stats](Stats-v1.md).
 
+Example parser that prints `accession` and `seqstats_contigs_sumlen`:
+
+```python
+    import sys, pyarrow.dataset as ds
+    d = ds.dataset(sys.argv[1], format="parquet").scanner(columns=["accession","seqstats_contigs_sumlen"])
+    print("accession\tseqstats_contigs_sumlen")
+    for b in d.to_batches():
+        a = b.column("accession"); s = b.column("seqstats_contigs_sumlen")
+        for i in range(b.num_rows):
+            print(f"{(a[i].as_py() or '')}\t{(s[i].as_py() or '')}")
+```
+
+Example usage:
+
+    python parquet_parse.py  logan-seqstats-contigs-v1.1.parquet > logan-seqstats-contigs-v1.1.sumlen.txt
+
+
+
 ## Various stats
 
 ![image](https://github.com/user-attachments/assets/f2ca285f-dea6-4fc7-ba00-d9bb52ac4195)
