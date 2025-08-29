@@ -29,7 +29,7 @@ All v1 contigs were recomputed to increase contiguity and fix spurious repetitio
 
 ## Data access
 
-See [Unitigs](Unitigs.md) and [Contigs](Contigs.md) pages.
+See [Unitigs](Unitigs.md), [Contigs](Contigs.md) and [Protein clusters](Proteins.md) pages.
 
 ## Tutorials
 
