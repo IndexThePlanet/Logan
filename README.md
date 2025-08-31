@@ -67,7 +67,7 @@ BibTeX:
 ```
 
 
-## Team
+## Logan Assembly Team
 
 - Lead: Rayan Chikhi
 - co-Lead: Artem Babaian
