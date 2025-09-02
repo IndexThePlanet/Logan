@@ -14,9 +14,10 @@ Then, type this command:
     awk -F',' '$4 == "\"9606\"" { print }' \
     > list_accessions_human.txt
 
-What this does, is stream a file from the Logan bucket that contains a list of all SRA accessions in Logan, along with some metadata extracted from the SRA (library type, organism name, organism tax ID, taxon rank, I forgot the last field). For other species, change 9606 in the command to the correct `tax_id`.
+What this does, is stream a file from the Logan bucket that contains a list of all SRA accessions in Logan, along with some metadata extracted from the SRA (library type, organism name, organism tax ID, taxon rank, scientific name). For other species, change 9606 in the command to the correct `tax_id`. See at the end of this document (SQL commands) for how file `sra_taxid.csv.zst`was generated. 
 
 This gives you a list of SRA accessions that are annotated as belonging to that species. But of course, not all Logan contigs of those accession will be from that species, e.g. think of the contaminating viruses, bacteria, etc..
+
 
 ## Cloud database method 
 
@@ -50,3 +51,26 @@ Then, same principle as the previous two methods: if you have a species name of 
     WHERE name = 'my species name, e.g. homo sapiens' AND total_count > 10000
 
 It will grab the list of accessions where there are sufficiently many reads from that species, and for each accession you have the `total_count` field, which very roughly approximates the number of reads from that accession corresponding to the species (but think of it as a subsampled number).
+
+
+## SQL Commands
+
+File `sra_taxid.csv.zst` was created using the following AWS Athena query:
+
+    SELECT 
+      m.acc,
+      m.assay_type,
+      m.organism,
+      t.tax_id,
+      t.rank AS taxonomic_rank,
+      t.sci_name AS scientific_name
+    FROM 
+      metadata m
+    LEFT JOIN
+      taxonomy t ON LOWER(m.organism) = LOWER(t.sci_name)
+    WHERE 
+      m.organism IS NOT NULL
+      AND m.organism != ''
+
+
+##
