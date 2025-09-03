@@ -13,8 +13,8 @@ The FASTA headers are the outputs of Prodigal: https://github.com/hyattpd/prodig
 
 Protein clusters are available via AWS S3 at the `s3://logan-pub` bucket in folder `/p/`. Two files:
 
-  human-complete.fa.zst
-  nonhuman-complete.fa.zst
+   human-complete.fa.zst
+   nonhuman-complete.fa.zst
 
 To download:
 
