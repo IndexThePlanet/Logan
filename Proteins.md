@@ -2,7 +2,7 @@
 
 ## Dataset
 
-Protein sequences extracted from Logan contigs using Prodigal, then clustered at 50% identity using MMseqs2.
+Protein sequences extracted from Logan contigs using Prodigal, then clustered at 50% identity using MMseqs2. This is "Logan50" as reported in the manuscript.
 
 ## Data format
 
