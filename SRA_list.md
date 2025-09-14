@@ -4,7 +4,19 @@
 
 This is a short tutorial to explain how to get a list of SRA accessions from a particular species. (This is not specific to Logan, it is just some advanced SRA browsing.)
 
-## Simple method (Logan-provided CSV)
+## All Logan accessions list (CSV)
+
+This is a list of all Logan unitig accessions (23.7M lines), along with all SRA metadata available from AWS Athena at the time for those accessions (4.8 GB file, courtesy of [@yhhshb](https://github.com/yhhshb)):
+    
+    https://s3.amazonaws.com/logan-pub/stats/logan_accessions_v1.1_SRA2023.csv.zst
+
+We provide this list but do not recommend that you download _all_ of Logan contigs, as it is huge (0.9 petabases uncompressed). However having this CSV file might help you quickly access metadata for a subset of accessions.
+
+## Taxonomy-based sets of the SRA
+
+Here we give ways to access SRA subsets of accessions corresponding to a particular species.
+
+### Simple method (Logan-provided CSV)
 
 Suppose you want a list of all SRA accessions in Logan where the annotated species is Homo sapiens. First, find out the `tax_id` using https://www.ncbi.nlm.nih.gov/taxonomy/ (for human it is 9606).
 
@@ -14,14 +26,14 @@ Then, type this command:
     awk -F',' '$4 == "\"9606\"" { print }' \
     > list_accessions_human.txt
 
-What this does, is stream a file from the Logan bucket that contains a list of all SRA accessions in Logan, along with some metadata extracted from the SRA (library type, organism name, organism tax ID, taxon rank, scientific name). For other species, change 9606 in the command to the correct `tax_id`. See at the end of this document (SQL commands) for how file `sra_taxid.csv.zst`was generated. 
+What this does, is stream a file from the Logan bucket that contains a list of all SRA accessions along with a more convient set of metadata extracted from the SRA (library type, organism name, organism tax ID, taxon rank, scientific name). For other species, change 9606 in the command to the correct `tax_id`. See at the end of this document (SQL commands) for how file `sra_taxid.csv.zst`was generated. 
 
 This gives you a list of SRA accessions that are annotated as belonging to that species. But of course, not all Logan contigs of those accession will be from that species, e.g. think of the contaminating viruses, bacteria, etc..
 
 
-## Cloud database method 
+### Cloud database method 
 
-The SRA metadata data can also be accessed via the cloud using Amazon Athena or Google BigQuery. Detailed instructions are provided here: https://www.ncbi.nlm.nih.gov/sra/docs/sra-cloud/
+The subsection above was a bit of a shortcut, because access to SRA metadata data is supposed to be via the cloud using Amazon Athena or Google BigQuery. Detailed instructions are provided here: https://www.ncbi.nlm.nih.gov/sra/docs/sra-cloud/
 
 As an alternative to Amazon Athena or Google BigQuery, you can use [DuckDB](https://duckdb.org/) (installation instructions [here](https://duckdb.org/docs/installation/?version=stable&environment=cli&platform=macos&download_method=direct)) to query SRA metadata stored as Parquet files in the cloud. This approach is simpler, as it does not require an account with a cloud provider, but it only provides the basic SRA metadata table and doesn't allow access to the taxonomy analysis table used in the example above (see the list of available columns [here](https://www.ncbi.nlm.nih.gov/sra/docs/sra-cloud-based-metadata-table/)).
 
@@ -38,9 +50,9 @@ As an alternative to Amazon Athena or Google BigQuery, you can use [DuckDB](http
 
 The query above retrieves accessions released after 7 September 2021, where the associated samples were collected in Brazil.
 
-## Advanced method (STAT)
+### Advanced method (STAT)
 
-This method doesn't simply use the SRA metadata provided by submitters, but uses inferred taxonomy in sequences. An example usage is shown [in this other tutorial](https://github.com/IndexThePlanet/Logan/blob/main/Chickens.md#getting-a-list-of-accessions) as well.
+This next method goes a step further, because it doesn't simply use the SRA metadata provided by submitters, but uses inferred taxonomy in sequences. An example usage is shown [in this other tutorial](https://github.com/IndexThePlanet/Logan/blob/main/Chickens.md#getting-a-list-of-accessions) as well.
 
 NCBI has annotated the entire SRA with a rough taxonomy of each accession. Check out their paper: https://pmc.ncbi.nlm.nih.gov/articles/PMC8450716/
 
@@ -72,5 +84,4 @@ File `sra_taxid.csv.zst` was created using the following AWS Athena query:
       m.organism IS NOT NULL
       AND m.organism != ''
 
-
-##
+Note: it contains all of Logan, but also some more accessions that are not in Logan due to their later submission date.
