@@ -6,11 +6,11 @@ This is a short tutorial to explain how to get a list of SRA accessions from a p
 
 ## All Logan accessions list (CSV)
 
-This is a list of all Logan unitig accessions (23.7M lines), along with all SRA metadata available from AWS Athena at the time for those accessions (4.8 GB file, courtesy of [@yhhshb](https://github.com/yhhshb)):
+This is a list of all Logan unitig accessions, along with all SRA metadata available from AWS Athena at the time for those accessions (11 GB file):
     
-    https://s3.amazonaws.com/logan-pub/stats/logan_accessions_v1.1_SRA2023.csv.zst
+    https://s3.amazonaws.com/logan-pub/stats/logan_accessions_v1.2_SRA2025.csv.zst
 
-We provide this list but do not recommend that you download _all_ of Logan contigs, as it is huge (0.9 petabases uncompressed). However having this CSV file might help you quickly access metadata for a subset of accessions.
+We provide this list but do not recommend that you download _all_ of Logan accessions, as it is huge (petabytes). However having this CSV file might help you quickly access metadata for a subset of accessions.
 
 ## Taxonomy-based sets of the SRA
 
@@ -85,3 +85,26 @@ File `sra_taxid.csv.zst` was created using the following AWS Athena query:
       AND m.organism != ''
 
 Note: it contains all of Logan, but also some more accessions that are not in Logan due to their later submission date.
+
+File `logan_accessions_v1.2_SRA2025.csv.zst` was created using the following Athena query:
+
+    SELECT *
+    FROM sra.metadata AS s
+    WHERE consent = 'public'
+      AND avgspotlen >= 31
+      AND CAST(releasedate AS date) <= DATE '2025-12-31'
+  
+Then filtered using:
+
+    awk '
+    NR==FNR {
+        set[$1]=1
+        next
+    }
+    FNR==1 { print; next }
+    match($0, /^"([^"]+)"/, m) {
+        if (m[1] in set) print
+    } 
+    ' pub-u.acc.txt <(zstdcat athena_query.zst)
+
+Previous version (v1.1): https://s3.amazonaws.com/logan-pub/stats/logan_accessions_v1.1_SRA2023.csv.zst 4.8 GB file, courtesy of [@yhhshb](https://github.com/yhhshb)
