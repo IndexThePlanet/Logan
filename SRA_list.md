@@ -96,15 +96,11 @@ File `logan_accessions_v1.2_SRA2025.csv.zst` was created using the following Ath
   
 Then filtered using:
 
-    awk '
-    NR==FNR {
-        set[$1]=1
-        next
-    }
-    FNR==1 { print; next }
-    match($0, /^"([^"]+)"/, m) {
-        if (m[1] in set) print
-    } 
-    ' pub-u.acc.txt <(zstdcat athena_query.zst)
+    zstdcat athena_query.zst | python3 -c '
+    import csv,sys
+    acc=set(l.strip() for l in open("pub-u.acc.txt"))
+    r=csv.DictReader(sys.stdin); w=csv.DictWriter(sys.stdout,r.fieldnames); w.writeheader()
+    [w.writerow(x) for x in r if x["acc"] in acc]
+    ' | zstd -T0 > logan_accessions_v1.2_SRA2025.csv.zst
 
 Previous version (v1.1): https://s3.amazonaws.com/logan-pub/stats/logan_accessions_v1.1_SRA2023.csv.zst 4.8 GB file, courtesy of [@yhhshb](https://github.com/yhhshb)
