@@ -31,6 +31,10 @@ All v1 contigs were recomputed to increase contiguity and fix spurious repetitio
 
 See [Unitigs](Unitigs.md), [Contigs](Contigs.md) and [Protein clusters](Proteins.md) pages.
 
+## Code access
+
+See [Code](Code.md) page for source code of constructing and analyzing Logan from the paper.
+
 ## Tutorials
 
 [Get a list of SRA accessions](SRA_list.md)
@@ -49,7 +53,7 @@ See [Unitigs](Unitigs.md), [Contigs](Contigs.md) and [Protein clusters](Proteins
 
 ## How to cite
 
-Official Logan dataset URL: https://registry.opendata.aws/pasteur-logan/
+Logan dataset URL: https://registry.opendata.aws/pasteur-logan/
 
 BibTeX:
 
