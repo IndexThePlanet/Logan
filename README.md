@@ -45,6 +45,8 @@ See [Code](Code.md) page for source code of constructing and analyzing Logan fro
 
 [Downloading, mapping many contigs to a gene of interest for a species of interest](Chickens.md)
 
+[Hands-on practicals on accessing Logan data, Logan Search](https://github.com/rchikhi/2025-logan-practical)
+
 ## Related resources
 
 [Logan Search](https://logan-search.org/)
