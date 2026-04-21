@@ -1,4 +1,4 @@
-# Logan v1.2 release (21 Apr 2025)
+# Logan v1.2 release (21 Apr 2026)
 
 ## Changelog
 
@@ -17,8 +17,6 @@ Cutoff date: December 31th, 2025
 
 Sequence statistics for each accession are available in `parquet` format, see e.g. [here](https://arrow.apache.org/docs/python/parquet.html) for how to parse.
 
-For v1.1 contigs:
-
 https://s3.amazonaws.com/logan-pub/stats/logan-seqstats-contigs-v1.2.parquet
 
 It contains the following fields:
@@ -29,7 +27,7 @@ It contains the following fields:
 * `seqstats_contigs_maxlen`: maximal contig length (in nucleotides)
 * `seqstats_contigs_sumlen`:  total size (in nucleotides) of contigs
 
-For unitigs and v1 contigs, see [v1 stats](Stats-v1.md). For v1.1 contigs, see [v1.1 stats](Stats-v1.1.md).
+Replace contigs to unitigs for unitigs stats.
 
 Example parser that prints `accession` and `seqstats_contigs_sumlen`:
 
