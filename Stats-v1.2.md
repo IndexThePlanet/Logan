@@ -43,5 +43,5 @@ for b in sc.to_batches():
 
 Example usage:
 
-    python parquet_parse.py  logan-seqstats-contigs-v1.1.parquet > logan-seqstats-contigs-v1.1.sumlen.txt
+    python parquet_parse.py  logan-seqstats-contigs-v1.2.parquet > logan-seqstats-contigs-v1.2.sumlen.txt
 
