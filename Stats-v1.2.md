@@ -2,7 +2,7 @@
 
 ## Changelog
 
-* Added Logan unitigs and contigs for 2024 and 2025. 
+* Added Logan unitigs and contigs for nearly all SRA accessions from 2024 and 2025. 
      
 ## General statistics
 
