@@ -5,7 +5,7 @@ Photo source: https://www.karmactive.com/mount-logan-the-crown-jewel-of-canadas-
 
 ## Summary
 
-Logan is a dataset of DNA and RNA sequences. It has been constructed by performing genome assembly over a December 2023 freeze of the entire NCBI Sequence Read Archive, which at the time contained 50 petabases of public raw data. Two related sets of assembled sequences are released: unitigs and contigs. Unitigs preserve nearly all the information present in the original sample, whereas contigs get rid of sequencing errors and biological variation for the benefit of increased sequence length. Both sets are hosted on a public S3 bucket provided by the Registry of Open Data at AWS, in compressed form. By downloading either unitigs or contigs, users can access the wealth of information contained in the SRA 10x (respectively 40x for contigs) more efficiently in time and disk space compared to raw reads, with minor loss of sensitivity and higher contiguity.
+Logan is a dataset of DNA and RNA sequences. It has been constructed by performing genome assembly over a end-of-2025 freeze of the entire NCBI Sequence Read Archive, which at the time contained 87 petabases of public raw data. Two related sets of assembled sequences are released: unitigs and contigs. Unitigs preserve nearly all the information present in the original sample, whereas contigs get rid of sequencing errors and biological variation for the benefit of increased sequence length. Both sets are hosted on a public S3 bucket provided by the Registry of Open Data at AWS, in compressed form. By downloading either unitigs or contigs, users can access the wealth of information contained in the SRA 10x (respectively 40x for contigs) more efficiently in time and disk space compared to raw reads, with minor loss of sensitivity and higher contiguity.
 
 ## Preprint
 
@@ -13,19 +13,17 @@ Read more about Logan here: https://www.biorxiv.org/content/10.1101/2024.07.30.6
 
 ## SRA size
 
-In December 2023, the public part of SRA consisted of raw sequencing data totalling 50 petabases across 27 million accessions. Each accession corresponds to a DNA sequencing experiment performed by a biology lab somewhere around the world. As you can see below, the majority of accessions and bases are DNA, followed by Covid samples and RNA, then metagenomes and single-cell.
+In December 2025, the public part of SRA consisted of raw sequencing data totalling 87 petabases across 38 million accessions. Each accession corresponds to a DNA sequencing experiment performed by a biology lab somewhere around the world. As you can see below, the majority of accessions and bases are DNA, followed by Covid samples and RNA, then metagenomes and single-cell.
 
 ![image](https://github.com/IndexThePlanet/Logan/assets/1218301/3b76ced7-ed01-4842-83f0-d897c0cf7d55)
 
-Note, the y-axis of the second panel is in megabases, as this is the preferred unit for SRA accession sizes. 20 G megabases is 20 petabases.
+Note, the y-axis of the second panel is in megabases, as this is the preferred unit for SRA accession sizes. For example, 20 G megabases is 20 petabases.
 
-## v1 release
+## v1.2 release
 
-All sequencing experiments from a December 2023 freeze of the SRA have been reconstructed and made available as unitigs and contigs as a v1 release of Logan. See the [Stats v1](Stats-v1.md) page for more details on this data.
+Nearly all sequencing experiments from a December 2025 freeze of the SRA have been reconstructed and made available as unitigs and contigs as the v1.2 release of Logan. See the [Stats v1.2](Stats-v1.2.md) page for more details on this data.
 
-## v1.1 release
-
-All v1 contigs were recomputed to increase contiguity and fix spurious repetitions. See [Stats v1.1](Stats-v1.1.md) page for more details on this data.
+For older releases notes, see the original release (December 2023 freeze) in [Stats v1](Stats-v1.md) and v1 contigs were recomputed to increase contiguity and fix spurious repetitionsin [Stats v1.1](Stats-v1.1.md).
 
 ## Data access
 
