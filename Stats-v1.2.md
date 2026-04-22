@@ -10,7 +10,7 @@ Cutoff date: December 31th, 2025
 
 * 38.1 million accessions assembled into unitigs, totalling 99.5% of the SRA by size (86.6 petabases of raw reads assembled into unitigs)
 * 37.3 million accessions assembled into contigs (specifically 37,377,661 which is around 92.3% of the SRA by size)
-* XXX petabytes of unitigs compressed (s3://logan-pub/u/)
+* 4.19 petabytes of unitigs compressed (s3://logan-pub/u/)
 * 623 terabytes of contigs compressed (s3://logan-pub/c/)
 
 ## Detailed statistics
