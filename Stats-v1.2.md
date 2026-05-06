@@ -27,7 +27,7 @@ It contains the following fields:
 * `seqstats_contigs_maxlen`: maximal contig length (in nucleotides)
 * `seqstats_contigs_sumlen`:  total size (in nucleotides) of contigs
 
-Replace contigs to unitigs for unitigs stats.
+Replace contigs to unitigs in the fields for unitigs stats (same file).
 
 Example parser that prints `accession` and `seqstats_contigs_sumlen`:
 
