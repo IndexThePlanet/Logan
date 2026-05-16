@@ -19,7 +19,7 @@ Code written for the Logan project, hosted across the contributing labs.
 ### Downstream analyses
 * **Logan50 protein clustering** infrastructure : https://github.com/leejoey0921/cluster-logan/
 * **Plasmid identification** via circular contig detection : https://gitlab.pasteur.fr/rchikhi_pasteur/logan-circles
-* * **reorient-circular-seq**, used in the plasmid pipeline to shift sequence breakpoints to intergenic regions : https://github.com/apcamargo/reorient-circular-seq
+* **reorient-circular-seq**, used in the plasmid pipeline to shift sequence breakpoints to intergenic regions : https://github.com/apcamargo/reorient-circular-seq
 * **PETadex** plastic-active enzyme search : https://github.com/ababaian/petadex
 * **P4 phage satellite** expansion : https://github.com/kdcurry/P4-logan
 * **AMR gene discovery** : https://github.com/mmontonerin/logan_AMR
