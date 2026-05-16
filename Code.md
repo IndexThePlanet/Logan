@@ -2,7 +2,12 @@
 
 All repositories cited in the Methods section of the Logan paper are listed
 below, grouped by whether the code was written for Logan or is existing
-third-party software used by Logan.
+third-party software used by Logan. All repositories have been archived on
+Zenodo for permanent access:
+
+**Zenodo archive:** https://zenodo.org/records/20241498  
+**DOI:** https://doi.org/10.5281/zenodo.20241498
+
 
 ## Logan-specific code
 
