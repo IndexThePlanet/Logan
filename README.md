@@ -31,7 +31,7 @@ See [Unitigs](Unitigs.md), [Contigs](Contigs.md) and [Protein clusters](Proteins
 
 ## Code access
 
-See [Code](Code.md) page for source code of constructing and analyzing Logan from the paper.
+See [Code](Code.md) page for source code related to Logan.
 
 ## Tutorials
 
@@ -50,6 +50,8 @@ See [Code](Code.md) page for source code of constructing and analyzing Logan fro
 [Logan Search](https://logan-search.org/)
 
 [Logan talk at CGSI 2024](https://www.youtube.com/watch?v=H-8L_hFWXCQ)
+
+[Web browser for `logan-pub` S3 bucket](https://logan-pub.s3.amazonaws.com/index.html)
 
 ## How to cite
 
