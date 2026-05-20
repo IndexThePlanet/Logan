@@ -27,7 +27,7 @@ For older releases notes, see the original release (December 2023 freeze) in [St
 
 ## Data access
 
-See [Unitigs](Unitigs.md), [Contigs](Contigs.md) and [Protein clusters](Proteins.md) pages.
+See [Unitigs](Unitigs.md), [Contigs](Contigs.md) and [Protein clusters](Proteins.md) pages. [Web browser](https://logan-pub.s3.amazonaws.com/index.html) for `logan-pub` S3 bucket.
 
 ## Code access
 
@@ -50,8 +50,6 @@ See [Code](Code.md) page for source code related to Logan.
 [Logan Search](https://logan-search.org/)
 
 [Logan talk at CGSI 2024](https://www.youtube.com/watch?v=H-8L_hFWXCQ)
-
-[Web browser for `logan-pub` S3 bucket](https://logan-pub.s3.amazonaws.com/index.html)
 
 ## How to cite
 
