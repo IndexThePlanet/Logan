@@ -9,12 +9,16 @@ Protein sequences extracted from Logan contigs using Prodigal, then clustered at
 Proteins are stored in FASTA format, in sequences of amino acids.
 The FASTA headers are the outputs of Prodigal: https://github.com/hyattpd/prodigal/wiki/understanding-the-prodigal-output#protein-translations
 
+The TSV files provide the mapping between the original SRA contigs and the centroids.
+
 ## Data access
 
-Protein clusters are available via AWS S3 at the `s3://logan-pub` bucket in folder `/p/`. Two files:
+Protein clusters are available via AWS S3 at the `s3://logan-pub` bucket in folder `/p/`. Files:
 
-    human-complete.fa.zst
-    nonhuman-complete.fa.zst
+    5.5 GiB human-complete.fa.zst
+    235.4 GiB human-complete.tsv.zst
+    252.7 GiB nonhuman-complete.fa.zst
+    806.6 GiB nonhuman-complete.tsv.zst
 
 To download:
 
