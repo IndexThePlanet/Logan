@@ -46,7 +46,7 @@ zstd -d file.zst
 
 ## ⚡ Fast Access (Indexed Lookup)
 
-The protein and cluster files are zstd-indexed, enabling fast key-based queries without decompressing the files. Use the scripts from [RolandFaure/zstd_block_compress](https://www.github.com/RolandFaure/zstd_block_compress).
+The protein and cluster files are zstd-indexed, enabling fast key-based queries without decompressing the files. Keys can be the Logan50 clusters (for the fasta files) or the protein name (for the cluster mapping files). Use the scripts from [RolandFaure/zstd_block_compress](https://www.github.com/RolandFaure/zstd_block_compress).
 
 ### Query Examples
 1. Retrieve all proteins in cluster `SRR21362335_1965_2`:
