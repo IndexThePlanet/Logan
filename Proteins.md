@@ -2,7 +2,7 @@
 
 ## 🧬 Dataset
 
-This repository contains protein sequences derived from all contigs published in the **Logan project (v1.0, datasets up to December 2023)**, called using **Prodigal**. Proteins were extracted from Logan contigs, then clustered at **50% identity** using **MMSeqs2**. Accessions are split into **human-associated** and **nonhuman-associated** datasets.
+This repository contains protein sequences derived from all contigs published in the **Logan project (v1.0, datasets up to December 2023)**, called using **Prodigal**. Proteins were then clustered at **50% identity** using **MMSeqs2**. Accessions are split into **human-associated** and **nonhuman-associated** datasets.
 
 ### Available Datasets
 
@@ -46,7 +46,7 @@ zstd -d file.zst
 
 ## ⚡ Fast Access (Indexed Lookup)
 
-The protein and cluster files are zstd-indexed, enabling fast key-based queries without decompressing the files. Keys can be the Logan50 clusters (for the fasta files) or the protein name (for the cluster mapping files). Use the scripts from [RolandFaure/zstd_block_compress](https://www.github.com/RolandFaure/zstd_block_compress).
+The protein and cluster files are indexed, enabling fast key-based queries without decompressing the files. The index file is provided separately. Keys can be the Logan50 clusters (for the fasta files) or the protein name (for the cluster mapping files). Use the scripts from [RolandFaure/zstd_block_compress](https://www.github.com/RolandFaure/zstd_block_compress).
 
 ### Query Examples
 1. Retrieve all proteins in cluster `SRR21362335_1965_2`:
