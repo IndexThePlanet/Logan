@@ -65,7 +65,7 @@ sh query_zst.sh nonhuman-complete-proteins-to-clusters.index.tsv nonhuman-comple
 
 ```bash
 sh query_zst.sh nonhuman-complete-proteins-to-clusters.index.tsv nonhuman-complete-proteins-to-clusters.tsv.zst SRR2625865_8456_1 | \
-  awk '{print \$2}' | \
+  awk '{print $2}' | \
   xargs sh query_zst.sh logan_nonhuman_proteins.index.tsv logan_nonhuman_proteins.fasta.zst | \
   grep -A 1 SRR2625865_8456_1
  ```
