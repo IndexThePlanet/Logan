@@ -1,8 +1,6 @@
 # Logan Proteins
 
-## Dataset
-
-This repository contains protein sequences derived from all contigs published in the **Logan project (contigs v1.0, datasets up to December 2023)**, called using **Prodigal**. Proteins marked as *complete* by PRodigal were then clustered at **50% identity** using **MMSeqs2**. Accessions are split into **human-associated** and **nonhuman-associated** datasets.
+Protein sequences derived from all contigs published in the **Logan project (v1.0 contigs, accessions up to December 2023)**, called using **Prodigal**. Proteins marked as *complete* by Prodigal were then clustered at **50% identity** using **MMSeqs2**. Accessions are split into **human-associated** and **nonhuman-associated** datasets.
 
 | Dataset | Description | Size |
 |---------|-------------|------|
@@ -23,14 +21,13 @@ This repository contains protein sequences derived from all contigs published in
 
 ### Data download
 
-Files are available in the `s3://logan-pub` bucket under `/p/`.
+Files are available in the `s3://logan-pub` bucket under folder `/p/`.
 
 You can use either wget or aws. E.g. to download logan_human_proteins.fasta.zst you can do:
 ```bash
-aws s3 cp s3://logan-pub/p/logan_human_proteins.fasta.zst
-wget https://s3.amazonaws.com/logan-pub/p/logan_human_proteins.fasta.zst
+aws s3 cp s3://logan-pub/p/logan_c1.0_human_proteins.fasta.zst
+wget https://s3.amazonaws.com/logan-pub/p/logan_c1.0_human_proteins.fasta.zst
 ```
-
 
 Decompress files using `zstd`:
 ```bash
@@ -64,20 +61,20 @@ The protein and cluster files are indexed, enabling fast key-based queries witho
 1. Retrieve all proteins in cluster `SRR21362335_1965_2`:
 
 ```bash
-sh query_zst.sh logan_nonhuman_proteins.index.tsv logan_nonhuman_proteins.fasta.zst SRR21362335_1965_2
+sh query_zst.sh logan_c1.0_nonhuman_proteins.index.tsv logan_c1.0_human_proteins.fasta.zst SRR21362335_1965_2
 ```
 
 2. Find the cluster of the protein `SRR2625865_8456_1`:
 
 ```bash
-sh query_zst.sh nonhuman-complete-proteins-to-clusters.index.tsv nonhuman-complete-proteins-to-clusters.tsv.zst SRR2625865_8456_1
+sh query_zst.sh logan50_c1.0_nonhuman_complete-protein-to-cluster.index.tsv logan50_c1.0_nonhuman_complete-protein-to-cluster.tsv.zst SRR2625865_8456_1
 ```
 
 3. Retrieve the sequence of the `SRR2625865_8456_1` protein by combining the two above commands:
 
 ```bash
-sh query_zst.sh nonhuman-complete-proteins-to-clusters.index.tsv nonhuman-complete-proteins-to-clusters.tsv.zst SRR2625865_8456_1 | \
+sh query_zst.sh logan50_c1.0_nonhuman_complete-protein-to-cluster.index.tsv  logan50_c1.0_nonhuman_complete-protein-to-cluster.tsv.zst SRR2625865_8456_1 | \
   awk '{print $2}' | \
-  xargs sh query_zst.sh logan_nonhuman_proteins.index.tsv logan_nonhuman_proteins.fasta.zst | \
+  xargs sh query_zst.sh logan_c1.0_nonhuman_proteins.index.tsv logan_nonhuman_proteins.fasta.zst | \
   grep -A 1 SRR2625865_8456_1
  ```
