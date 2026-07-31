@@ -21,7 +21,7 @@ Protein sequences derived from all contigs published in the **Logan project (v1.
 ### Index files
 
 | Dataset | Index of  |
-|---------|-------------|------|
+|---------|-------------|
 | `logan_c1.0_human_proteins.index.tsv` | `logan_c1.0_human_proteins.fasta.zst` |
 | `logan_c1.0_nonhuman_proteins.index.tsv` | `logan_c1.0_nonhuman_proteins.fasta.zst` |
 | `logan50_c1.0_human_complete_cluster-to-protein.index.tsv` | `logan50_c1.0_human_complete_cluster-to-protein.tsv.zst` |
