@@ -34,8 +34,7 @@ Decompress files using `zstd`:
 zstd -d file.zst
 ```
 
-
-## 📂 Data format
+## Data format
 
 ### Protein files
 - **Format:** FASTA (amino acid sequences).
@@ -51,7 +50,6 @@ zstd -d file.zst
 - **Sorting:** Lexicographically sorted by Logan50 cluster name.
 
 ---
-
 
 ## Fast access (indexed lookup)
 
