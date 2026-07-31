@@ -52,11 +52,11 @@ zstd -d file.zst
 
 ## Fast access (indexed lookup)
 
-The protein and cluster files are indexed, enabling fast key-based queries without decompressing the files. The index files are provided separately, see the table below. Keys can be the Logan50 clusters (for the two `logan_c1.0_*.fasta.zst`  files and the `*_cluster-to-protein.tsv.zst` files) or the protein name (for the `protein-to-cluster` TSV files). Use the scripts from [RolandFaure/zstd_block_compress](https://www.github.com/RolandFaure/zstd_block_compress).
+The protein and cluster files are indexed, enabling fast key-based queries without decompressing the files. The index files are provided in the same forlder, see the table below. Keys can be the Logan50 clusters (for the two `logan_c1.0_*.fasta.zst`  files and the `*_cluster-to-protein.tsv.zst` files) or the protein name (for the `protein-to-cluster` TSV files). Use the scripts from [RolandFaure/zstd_block_compress](https://www.github.com/RolandFaure/zstd_block_compress).
 
 ### Index files
 
-| Dataset | Index of  |
+| File | Index of  |
 |---------|-------------|
 | `logan_c1.0_human_proteins.index.tsv` | `logan_c1.0_human_proteins.fasta.zst` |
 | `logan_c1.0_nonhuman_proteins.index.tsv` | `logan_c1.0_nonhuman_proteins.fasta.zst` |
