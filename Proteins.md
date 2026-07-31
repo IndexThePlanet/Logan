@@ -13,11 +13,21 @@ Protein sequences derived from all contigs published in the **Logan project (v1.
 
 | File | Description | Size |
 |------|-------------|------|
-| `logan50_c1.0_human_complete-protein-to-cluster.tsv.zst` | Mapping of human-associated proteins to their Logan50 clusters | 347 GiB |
-| `logan50_c1.0_human_complete-cluster-to-protein.tsv.zst` | Mapping of human-associated Logan50 cluster representatives to all the proteins in the cluster | 235 GiB |
-| `logan50_c1.0_nonhuman_complete-protein-to-cluster.tsv.zst` | Mapping of nonhuman-associated proteins to their Logan50 clusters | 1.1 TiB |
-| `logan50_c1.0_nonhuman_complete-cluster-to-protein.tsv.zst` | Mapping of nonhuman-associated Logan50 cluster representatives to all the proteins in the cluster | 806 GiB |
+| `logan50_c1.0_human_complete_protein-to-cluster.tsv.zst` | Mapping of human-associated proteins to their Logan50 clusters | 347 GiB |
+| `logan50_c1.0_human_complete_cluster-to-protein.tsv.zst` | Mapping of human-associated Logan50 cluster representatives to all the proteins in the cluster | 235 GiB |
+| `logan50_c1.0_nonhuman_complete_protein-to-cluster.tsv.zst` | Mapping of nonhuman-associated proteins to their Logan50 clusters | 1.1 TiB |
+| `logan50_c1.0_nonhuman_complete_cluster-to-protein.tsv.zst` | Mapping of nonhuman-associated Logan50 cluster representatives to all the proteins in the cluster | 806 GiB |
 
+### Index files
+
+| Dataset | Index of  |
+|---------|-------------|------|
+| `logan_c1.0_human_proteins.index.tsv` | `logan_c1.0_human_proteins.fasta.zst` |
+| `logan_c1.0_nonhuman_proteins.index.tsv` | `logan_c1.0_nonhuman_proteins.fasta.zst` |
+| `logan50_c1.0_human_complete_cluster-to-protein.index.tsv` | `logan50_c1.0_human_complete_cluster-to-protein.tsv.zst` |
+| `logan50_c1.0_human_complete_protein-to-cluster.index.tsv` | `logan50_c1.0_human_complete_protein-to-cluster.tsv.zst` |
+| `logan50_c1.0_nonhuman_complete_cluster-to-protein.index.tsv` | `logan50_c1.0_nonhuman_complete_cluster-to-protein.tsv.zst` |
+| `logan50_c1.0_nonhuman_complete_protein-to-cluster.index.tsv` | `logan50_c1.0_nonhuman_complete_protein-to-cluster.tsv.zst` |
 
 ### Data download
 
@@ -53,7 +63,7 @@ zstd -d file.zst
 
 ## Fast access (indexed lookup)
 
-The protein and cluster files are indexed, enabling fast key-based queries without decompressing the files. The index file is provided separately. Keys can be the Logan50 clusters (for the fasta files) or the protein name (for the cluster mapping files). Use the scripts from [RolandFaure/zstd_block_compress](https://www.github.com/RolandFaure/zstd_block_compress).
+The protein and cluster files are indexed, enabling fast key-based queries without decompressing the files. The index files are provided separately, see the above table. Keys can be the Logan50 clusters (for the two `logan_c1.0_*.fasta.zst`  files and the `*_cluster-to-protein.tsv.zst` files) or the protein name (for the `protein-to-cluster` TSV files). Use the scripts from [RolandFaure/zstd_block_compress](https://www.github.com/RolandFaure/zstd_block_compress).
 
 ### Query examples
 1. Retrieve all proteins in cluster `SRR21362335_1965_2`:
