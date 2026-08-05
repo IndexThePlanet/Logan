@@ -6,8 +6,8 @@ Protein sequences derived from all contigs published in the **Logan project (v1.
 |---------|-------------|------|
 | `logan_c1.0_human_proteins.fasta.zst` | All human-associated proteins | 283 GiB |
 | `logan_c1.0_nonhuman_proteins.fasta.zst` | All nonhuman-associated proteins | 1.8 TiB |
-| `logan50_c1.0_human_complete.fasta.zst` | Representative clustered human-associated proteins (50% identity) | 5.5 GiB |
-| `logan50_c1.0_nonhuman_complete.fasta.zst` | Representative clustered nonhuman-associated proteins (50% identity) | 253 GiB |
+| `logan50_c1.0_human_complete.fa.zst` | Representative clustered human-associated proteins (50% identity) | 5.5 GiB |
+| `logan50_c1.0_nonhuman_complete.fa.zst` | Representative clustered nonhuman-associated proteins (50% identity) | 253 GiB |
 
 ## Cluster mapping files
 
