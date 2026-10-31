@@ -15,7 +15,7 @@ Cutoff date: December 31th, 2025
 
 ## Detailed statistics
 
-Sequence statistics for each accession are available in `parquet` format, see e.g. [here](https://arrow.apache.org/docs/python/parquet.html) for how to parse.
+Sequence statistics for accessions are available in `parquet` format, see e.g. [here](https://arrow.apache.org/docs/python/parquet/index.html) for how to parse.
 
 https://s3.amazonaws.com/logan-pub/stats/logan-seqstats-contigs-v1.2.parquet
 
@@ -27,7 +27,7 @@ It contains the following fields:
 * `seqstats_contigs_maxlen`: maximal contig length (in nucleotides)
 * `seqstats_contigs_sumlen`:  total size (in nucleotides) of contigs
 
-Replace contigs to unitigs in the fields for unitigs stats (same file).
+Replace contigs to unitigs in the fields for unitigs stats (same file). Note: a handful of accessions may be present in Logan but missing from this stats file.
 
 Example parser that prints `accession` and `seqstats_contigs_sumlen`:
 
