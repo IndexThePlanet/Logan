@@ -17,7 +17,7 @@ In December 2025, the public part of SRA consisted of raw sequencing data totall
 
 ![image](https://github.com/IndexThePlanet/Logan/assets/1218301/3b76ced7-ed01-4842-83f0-d897c0cf7d55)
 
-Note, the y-axis of the second panel is in megabases, as this is the preferred unit for SRA accession sizes. For example, 20 G megabases is 20 petabases.
+Figure from the end-of-2023 snapshot. Note, the y-axis of the second panel is in megabases, as this is the preferred unit for SRA accession sizes. For example, 20 G megabases is 20 petabases.
 
 ## v1.2 release
 
